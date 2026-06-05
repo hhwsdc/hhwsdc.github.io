@@ -236,6 +236,11 @@ h1, h2, h3, h4 {
   transform: translateY(-1px);
 }
 
+/* ─── 모바일 드로어 헤더 (데스크탑에서 숨김) ─── */
+.drawer-header {
+  display: none;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -1362,6 +1367,49 @@ a.ci-value:hover { color: var(--gold); }
 
   .hamburger { display: flex; }
   .nav-overlay { display: block; }
+
+  /* 드로어 상단 헤더 */
+  .drawer-header {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px 20px;
+    border-bottom: 1px solid rgba(201,168,76,.2);
+    margin-bottom: 8px;
+    position: sticky;
+    top: 0;
+    background: #0d1e38;
+    z-index: 1;
+  }
+  .drawer-logo {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: rgba(255,255,255,.08);
+    padding: 3px;
+    border: 1px solid rgba(201,168,76,.3);
+    flex-shrink: 0;
+  }
+  .drawer-title {
+    flex: 1;
+    font-size: .88rem;
+    font-weight: 700;
+    color: var(--gold, #c9a84c);
+    letter-spacing: .05em;
+  }
+  .drawer-close {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.15);
+    color: rgba(255,255,255,.7);
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .2s, color .2s;
+    flex-shrink: 0;
+  }
+  .drawer-close:hover { background: rgba(201,168,76,.2); color: var(--gold, #c9a84c); }
 
   /* ── 풀스크린 모바일 드로어 ── */
   .nav-links {

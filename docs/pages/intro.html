@@ -8,6 +8,55 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    /* ── 로고 hero ── */
+    .hero-logo-wrap {
+      display: flex; justify-content: center; margin-bottom: 1.4rem;
+    }
+    .hero-logo {
+      width: 120px; height: 120px; border-radius: 50%;
+      object-fit: contain;
+      box-shadow: 0 0 0 6px rgba(201,168,76,.25), 0 0 32px rgba(201,168,76,.35);
+      animation: logoPulse 3s ease-in-out infinite;
+      background: rgba(255,255,255,.06);
+      padding: 8px;
+    }
+    @keyframes logoPulse {
+      0%,100% { box-shadow: 0 0 0 6px rgba(201,168,76,.25), 0 0 32px rgba(201,168,76,.3); }
+      50%      { box-shadow: 0 0 0 12px rgba(201,168,76,.15), 0 0 52px rgba(201,168,76,.5); }
+    }
+
+    /* ── 로고 showcase block (about section) ── */
+    .logo-showcase {
+      display: flex; align-items: center; gap: 2rem;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(201,168,76,.25);
+      border-radius: 20px; padding: 2rem 2.5rem;
+      margin-bottom: 3rem;
+    }
+    .logo-showcase-img {
+      width: 100px; height: 100px; border-radius: 50%;
+      object-fit: contain; flex-shrink: 0;
+      background: rgba(255,255,255,.07);
+      padding: 8px;
+      box-shadow: 0 0 24px rgba(201,168,76,.4);
+    }
+    .logo-showcase-text h3 {
+      font-family: 'Noto Serif KR', serif;
+      font-size: clamp(1.1rem,2vw,1.4rem);
+      font-weight: 900; color: #fff; margin-bottom: .4rem; line-height: 1.4;
+    }
+    .logo-showcase-text p {
+      font-size: .85rem; color: rgba(220,215,200,.75); line-height: 1.6; margin: 0;
+    }
+    .logo-showcase-text .logo-en {
+      font-size: .78rem; color: var(--gold, #c9a84c);
+      letter-spacing: .08em; font-weight: 700; margin-top: .25rem; display: block;
+    }
+    @media(max-width:580px) {
+      .logo-showcase { flex-direction: column; text-align: center; padding: 1.5rem; }
+    }
+  </style>
 </head>
 <body>
 <nav class="navbar scrolled" id="navbar">
@@ -38,6 +87,9 @@
 <!-- PAGE HERO -->
 <section class="page-hero">
   <div class="page-hero-content">
+    <div class="hero-logo-wrap">
+      <img src="../assets/img/hhwsdc-logo.png" alt="화성화옹지구 서부발전 협의회 (화서협) 로고" class="hero-logo" />
+    </div>
     <div class="section-tag light">협의회 소개</div>
     <h1>화성화옹지구<br/>서부발전협의회</h1>
     <p>Hwaseong Hwaong Western Development Council</p>
@@ -47,6 +99,19 @@
 <!-- ABOUT SECTION -->
 <section class="section" id="about">
   <div class="container">
+
+    <!-- 로고 showcase -->
+    <div class="logo-showcase reveal">
+      <img src="../assets/img/hhwsdc-logo.png" alt="화서협 공식 로고" class="logo-showcase-img" />
+      <div class="logo-showcase-text">
+        <h3>화성화옹지구 서부발전 협의회 (화서협)</h3>
+        <span class="logo-en">Hwaseong Hwaong Western Development Council · HHWSDC</span>
+        <p>경기남부 국제공항 화옹지구 유치를 위해 결성된 비영리 시민 협의회입니다.<br/>
+        화옹지구 주민과 화성시민의 균형 발전 및 미래 세대의 경제적 기회 확보를 위해
+        정책 제안·자료 발간·청원 활동을 이어가고 있습니다.</p>
+      </div>
+    </div>
+
     <div class="about-grid">
       <div class="about-card reveal">
         <div class="about-icon">🏛️</div>

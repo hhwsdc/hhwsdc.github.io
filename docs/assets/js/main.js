@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════
    HHWSDC — Main JavaScript
    ═══════════════════════════════════════════ */
 
@@ -218,5 +218,5 @@ document.addEventListener('DOMContentLoaded', () => {
     el.textContent = new Date().getFullYear();
   });
 
-  console.log('🛫 HHWSDC — 화성화옹지구 서부발전협의회 웹사이트 로드 완료');
+  console.log('🛫 HHWSDC — 화성화옹지구 서부발전 협의회 (화서협) 웹사이트 로드 완료');
 });

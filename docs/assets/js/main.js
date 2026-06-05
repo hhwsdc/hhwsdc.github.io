@@ -130,16 +130,55 @@ document.addEventListener('DOMContentLoaded', () => {
       const btn = form.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
 
-      btn.textContent = '✅ 제출 완료! 감사합니다';
-      btn.style.background = '#16a34a';
+      // Update button state to sending
+      btn.textContent = '⏳ 전송 중...';
       btn.disabled = true;
 
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        btn.disabled = false;
+      // Convert Form data to JSON payload
+      const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+
+      // Send the request via FormSubmit AJAX endpoint
+      fetch("https://formsubmit.co/ajax/hhwsdc@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(resData => {
+        // Success
+        btn.textContent = '✅ 제출 완료! 감사합니다';
+        btn.style.background = '#16a34a';
         form.reset();
-      }, 3000);
+        
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      })
+      .catch(error => {
+        console.error('Submission error:', error);
+        btn.textContent = '❌ 전송 실패 (다시 시도)';
+        btn.style.background = '#dc2626';
+        
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      });
     });
   }
 

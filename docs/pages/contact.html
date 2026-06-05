@@ -74,42 +74,49 @@
       </div>
       <div class="contact-form-area reveal delay-1">
         <h3>의견 및 지지 표명</h3>
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/hhwsdc@gmail.com" method="POST">
+          <!-- Honeypot to prevent spam -->
+          <input type="text" name="_honey" style="display:none">
+          <!-- Disable captcha to ensure smooth AJAX submission -->
+          <input type="hidden" name="_captcha" value="false">
+          <!-- Custom Email Subject -->
+          <input type="hidden" name="_subject" value="[HHWSDC] 새로운 의견 및 지지 표명 서명 제출">
+          
           <div class="form-group">
             <label>성함</label>
-            <input type="text" placeholder="홍길동" required />
+            <input type="text" name="name" placeholder="홍길동" required />
           </div>
           <div class="form-group">
             <label>이메일</label>
-            <input type="email" placeholder="your@email.com" required />
+            <input type="email" name="email" placeholder="your@email.com" required />
           </div>
           <div class="form-group">
             <label>거주 지역</label>
-            <select>
+            <select name="location" required>
               <option value="">선택해주세요</option>
-              <option>화성시 서부</option>
-              <option>화성시 동부</option>
-              <option>수원시</option>
-              <option>평택시</option>
-              <option>안산시</option>
-              <option>시흥시</option>
-              <option>용인시</option>
-              <option>기타 경기도</option>
-              <option>서울 및 수도권</option>
-              <option>기타</option>
+              <option value="화성시 서부">화성시 서부</option>
+              <option value="화성시 동부">화성시 동부</option>
+              <option value="수원시">수원시</option>
+              <option value="평택시">평택시</option>
+              <option value="안산시">안산시</option>
+              <option value="시흥시">시흥시</option>
+              <option value="용인시">용인시</option>
+              <option value="기타 경기도">기타 경기도</option>
+              <option value="서울 및 수도권">서울 및 수도권</option>
+              <option value="기타">기타</option>
             </select>
           </div>
           <div class="form-group">
             <label>의견 유형</label>
             <div class="radio-group">
-              <label class="radio-label"><input type="radio" name="opinion" value="support" checked /> 📣 화옹지구 공항 건설 지지</label>
-              <label class="radio-label"><input type="radio" name="opinion" value="question" /> ❓ 정책 관련 문의</label>
-              <label class="radio-label"><input type="radio" name="opinion" value="concern" /> 💬 건설적 의견 제시</label>
+              <label class="radio-label"><input type="radio" name="opinion" value="📣 화옹지구 공항 건설 지지 (support)" checked /> 📣 화옹지구 공항 건설 지지</label>
+              <label class="radio-label"><input type="radio" name="opinion" value="❓ 정책 관련 문의 (question)" /> ❓ 정책 관련 문의</label>
+              <label class="radio-label"><input type="radio" name="opinion" value="💬 건설적 의견 제시 (concern)" /> 💬 건설적 의견 제시</label>
             </div>
           </div>
           <div class="form-group">
             <label>내용</label>
-            <textarea placeholder="의견을 자유롭게 남겨주세요" rows="4"></textarea>
+            <textarea name="message" placeholder="의견을 자유롭게 남겨주세요" rows="4"></textarea>
           </div>
           <button type="submit" class="btn btn-primary full-width">의견 제출하기</button>
         </form>

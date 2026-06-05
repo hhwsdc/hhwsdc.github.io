@@ -1520,3 +1520,53 @@ a.ci-value:hover { color: var(--gold); }
   .rm-item { min-width: 80px; padding: 10px 6px; }
   .rm-text { font-size: 10px; }
 }
+
+/* ─── PAGE HERO FOR SUBPAGES ─── */
+.page-hero {
+  padding: 130px 0 70px;
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  border-bottom: 2px solid var(--gold-pale);
+}
+
+.page-hero-dark {
+  background: linear-gradient(185deg, var(--navy) 0%, var(--navy-light) 100%);
+  border-bottom-color: rgba(200, 150, 42, 0.3);
+}
+
+.page-hero-accent {
+  background: linear-gradient(135deg, var(--navy-light) 0%, rgba(200, 150, 42, 0.2) 100%);
+  border-bottom-color: var(--gold);
+}
+
+.page-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.page-hero h1 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  color: var(--white);
+  line-height: 1.35;
+}
+
+.page-hero p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.nav-links a.nav-active {
+  color: var(--gold-light) !important;
+  font-weight: 700;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 4px;
+}
+

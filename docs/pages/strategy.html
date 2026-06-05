@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>정명근 시장 설득 전략 | HHWSDC</title>
+  <meta name="description" content="정명근 화성시장의 6대 반대 논거에 대한 논리적 반박과 합리적 공론화 설득 전략 상세 분석." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .strategy-intro { background: var(--navy); color: var(--white); border-radius: var(--radius-lg); padding: 40px; margin-bottom: 60px; border-left: 5px solid var(--gold); }
+    .strategy-intro h2 { color: var(--gold-light); font-size: 1.4rem; margin-bottom: 16px; }
+    .strategy-intro p { color: rgba(255,255,255,0.85); line-height: 1.9; margin-bottom: 12px; }
+    .strategy-intro .nuance-box { background: rgba(200,150,42,0.15); border: 1px solid rgba(200,150,42,0.4); border-radius: var(--radius); padding: 20px; margin-top: 20px; }
+    .strategy-intro .nuance-box p { color: var(--gold-light); font-weight: 600; margin: 0; }
+
+    .objection-block { background: var(--off-white); border-radius: var(--radius-lg); padding: 40px; margin-bottom: 40px; border-left: 5px solid var(--red); }
+    .objection-block.response { background: #f0f9f4; border-left-color: var(--green); }
+    .objection-block h3 { font-size: 1.2rem; color: var(--navy); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+    .objection-block h3 .obj-num { background: var(--red); color: var(--white); border-radius: 50%; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 900; flex-shrink: 0; }
+    .objection-block.response h3 .obj-num { background: var(--green); }
+    .objection-block p { color: var(--text); line-height: 1.9; margin-bottom: 12px; font-size: 0.95rem; }
+    .objection-block .source-cite { font-size: 13px; color: var(--text-light); border-top: 1px solid var(--gray-light); padding-top: 12px; margin-top: 16px; }
+    .objection-block .source-cite a { color: var(--gold); text-decoration: underline; }
+
+    .pair-container { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px; }
+    @media (max-width: 768px) { .pair-container { grid-template-columns: 1fr; } }
+
+    .strategy-section { margin-bottom: 60px; }
+    .strategy-section h2 { font-size: 1.6rem; color: var(--navy); border-bottom: 3px solid var(--gold); padding-bottom: 12px; margin-bottom: 32px; }
+
+    .strategy-card { background: var(--navy); border-radius: var(--radius-lg); padding: 36px; margin-bottom: 28px; color: var(--white); }
+    .strategy-card h3 { color: var(--gold-light); font-size: 1.1rem; margin-bottom: 16px; }
+    .strategy-card p { color: rgba(255,255,255,0.85); line-height: 1.9; margin-bottom: 12px; font-size: 0.95rem; }
+    .strategy-card ul { padding-left: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .strategy-card li { color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.7; }
+    .strategy-card .evidence-box { background: rgba(200,150,42,0.12); border: 1px solid rgba(200,150,42,0.3); border-radius: var(--radius); padding: 20px; margin-top: 16px; }
+    .strategy-card .evidence-box p { color: var(--gold-light); font-size: 0.9rem; margin: 0; }
+    .strategy-card .evidence-box strong { color: var(--white); }
+
+    .data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
+    .data-table th { background: rgba(200,150,42,0.2); color: var(--gold-light); padding: 10px 14px; text-align: left; }
+    .data-table td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.85); }
+    .data-table tr:hover td { background: rgba(255,255,255,0.05); }
+
+    .conclusion-box { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); border: 2px solid var(--gold); border-radius: var(--radius-lg); padding: 48px; text-align: center; margin-top: 60px; }
+    .conclusion-box h2 { color: var(--gold-light); font-size: 1.6rem; margin-bottom: 20px; }
+    .conclusion-box p { color: rgba(255,255,255,0.85); line-height: 1.9; max-width: 700px; margin: 0 auto 16px; }
+    .conclusion-box .quote { font-size: 1.05rem; color: var(--gold-light); font-style: italic; background: rgba(200,150,42,0.1); border-radius: var(--radius); padding: 20px 28px; margin: 24px auto; max-width: 700px; border-left: 4px solid var(--gold); text-align: left; }
+
+    .tag-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+    .tag-item { background: rgba(200,150,42,0.15); border: 1px solid rgba(200,150,42,0.3); color: var(--gold-light); border-radius: 100px; padding: 6px 16px; font-size: 13px; font-weight: 600; }
+    .tag-item.green { background: rgba(22,163,74,0.15); border-color: rgba(22,163,74,0.3); color: #4ade80; }
+  </style>
+</head>
+<body>
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/img/hwaong_west_stamp.png" alt="HHWSDC 인장" class="logo-stamp" />
+      <div class="logo-text">
+        <span class="logo-ko">화성화옹지구 서부발전협의회</span>
+        <span class="logo-en">HHWSDC</span>
+      </div>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="intro.html">협의회 소개</a></li>
+      <li><a href="why.html">화옹지구 당위성</a></li>
+      <li><a href="impact.html">경제적 효과</a></li>
+      <li><a href="noise.html">소음 해결</a></li>
+      <li><a href="policy.html">정책 제안</a></li>
+      <li><a href="documents.html">자료실</a></li>
+      <li><a href="https://github.com/hhwsdc/" target="_blank">GitHub</a></li>
+      <li><a href="contact.html" class="nav-cta">청원 참여</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero page-hero-dark">
+  <div class="page-hero-content">
+    <div class="section-tag light">설득 전략 보고서</div>
+    <h1>정명근 시장 반대 논거<br/>분석 및 공론화 전략</h1>
+    <p>6대 반대 논거에 대한 논리적 반박과 합리적 공론화 방안</p>
+  </div>
+</section>
+
+<section class="section" id="strategy">
+  <div class="container">
+
+    <!-- 핵심 전제 -->
+    <div class="strategy-intro reveal">
+      <h2>📌 핵심 전제: 정명근 시장의 입장을 정확히 이해해야 합니다</h2>
+      <p>정명근 화성시장(2026년 6월 3일 재선)은 경기남부 국제공항 자체를 영구적으로 반대하는 것이 아닙니다. 그의 반대 핵심은 <strong>"수원군공항 이전과 결합된, 화성시 동의 없는 화옹지구 일방 지정"</strong>에 있습니다.</p>
+      <p>2025년 9월 정 시장은 다음과 같이 발언했습니다: <em>"국방 전략상 공항 이전이 필요하다면 화성시도 검토할 수 있지만, 단지 수원과 인접했다는 이유만으로 이전해야 한다는 주장은 설득력이 떨어진다. 국가가 경기남부 국제공항 필요성을 결정하면 그때 득실을 따져 결정해야 한다."</em> (경인일보, 2025.09)</p>
+      <div class="nuance-box">
+        <p>💡 따라서 설득 목표는 "반대 → 찬성"이 아닌, <strong>"반대 → 조건부 검토 테이블 참여"</strong>로 설정해야 현실적입니다.</p>
+      </div>
+    </div>
+
+    <!-- 반대 논거 6가지 + 반박 -->
+    <div class="strategy-section">
+      <h2>🔍 반대 논거 6가지 — 분석과 설득 논리</h2>
+
+      <!-- 1. 절차적 정당성 -->
+      <div class="pair-container reveal">
+        <div class="objection-block">
+          <h3><span class="obj-num">1</span>절차적 정당성 결여 주장</h3>
+          <p>화성시는 국방부가 2017년 2월 화성시·시민과의 협의 없이 화옹지구를 수원군공항 <strong>예비이전후보지</strong>로 일방 지정했다고 주장합니다. 정 시장은 2026년 2월 국방부 장관에게 지정 철회·전면 재검토를 공식 요구했습니다.</p>
+          <p>이는 단순한 반대가 아닌 <strong>헌법적 지방자치권 침해</strong> 주장으로, 법적·절차적 정당성 면에서 화성시의 주장은 상당한 설득력을 지닙니다.</p>
+          <div class="source-cite">출처: <a href="https://www.yna.co.kr/view/AKR20260211179300061" target="_blank">연합뉴스 (2026.02.11)</a></div>
+        </div>
+        <div class="objection-block response">
+          <h3><span class="obj-num" style="background:var(--green);">✓</span>설득 논리: 새로운 절차로 처음부터 시작</h3>
+          <p><strong>군공항 이전 절차와 완전히 분리된 민간 국제공항 절차를 새로 시작</strong>해야 합니다. 2017년 지정은 "수원군공항 이전" 맥락이었고, 경기남부 민간공항은 별개 사안입니다.</p>
+          <p>독일 뮌헨 공항(1992년 개항), 일본 간사이 공항(1994년 개항)은 모두 지자체와 국가가 <strong>공동 조사위원회를 구성해 수년간 협의</strong>한 후 건설했습니다. 한국도 이 모델을 따라야 합니다.</p>
+          <p><strong>제안:</strong> 경기도·국토부·화성시가 공동 참여하는 "경기남부 민간공항 타당성 조사 협의체"를 구성하고, 화성시의 동의를 전제 조건으로 설정합니다.</p>
+          <div class="source-cite">참고: 국가균형발전위원회 「공항개발사업 협의절차 가이드라인」(2023)</div>
+        </div>
+      </div>
+
+      <!-- 2. 군공항 결합 특별법 -->
+      <div class="pair-container reveal">
+        <div class="objection-block">
+          <h3><span class="obj-num">2</span>군공항·민항기 결합 특별법 반발</h3>
+          <p>정 시장은 2023년 추진된 '수원 군공항 이전 및 경기남부통합국제공항 건설 특별법'이 화성시장·화성시민의 <strong>자치권과 참여권을 배제</strong>한 채 화성 이전을 명시했다고 비판했습니다.</p>
+          <p>군사시설과 민간공항을 하나의 법안으로 묶는 방식은 주민 설득의 복잡성을 배가시키며, 화성시 주민들의 거부감을 증폭시키는 구조적 문제를 내포합니다.</p>
+          <div class="source-cite">출처: <a href="https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002977883" target="_blank">오마이뉴스 (2023)</a></div>
+        </div>
+        <div class="objection-block response">
+          <h3><span class="obj-num" style="background:var(--green);">✓</span>설득 논리: 군공항과 민간공항의 완전 분리</h3>
+          <p>민간단체와 HHWSDC의 공식 입장을 명확히 해야 합니다: <strong>"우리는 수원군공항 화성 이전을 요구하지 않습니다. 경기남부권 항공수요와 물류경쟁력 관점에서 순수 민간 국제공항 건설을 요구합니다."</strong></p>
+          <p>실제로 2024년 경기도 연구용역도 <strong>군공항 이전과 독립된 민간공항 단독 건설 가능성</strong>을 평가했으며, 화옹지구가 가장 높은 점수를 받았습니다.</p>
+          <p><strong>해외 사례:</strong> 영국 히스로 공항 확장, 미국 댈러스-포트워스 공항은 군사시설 없이 순수 민간공항으로 지역 반대를 넘어 건설된 대표 사례입니다.</p>
+        </div>
+      </div>
+
+      <!-- 3. 화성시 피해 전가 -->
+      <div class="pair-container reveal">
+        <div class="objection-block">
+          <h3><span class="obj-num">3</span>"화성에 피해만 전가" 인식</h3>
+          <p>정 시장은 해당 사업이 <strong>수원에는 개발이익</strong>(군공항 부지 개발)을 주고, <strong>화성에는 소음·환경 피해</strong>만 전가하는 구조라고 비판합니다. "지역차별"이라는 프레임으로 시민들의 감정적 반발을 동원하고 있습니다.</p>
+          <div class="source-cite">출처: <a href="https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002977883" target="_blank">오마이뉴스 (2023)</a></div>
+        </div>
+        <div class="objection-block response">
+          <h3><span class="obj-num" style="background:var(--green);">✓</span>설득 논리: 화성시민 순편익 수치화</h3>
+          <p><strong>일방적인 군공항 이전에 대한 우려는 100% 타당하며, 화성시민의 반대는 지극히 상식적입니다.</strong> 단순히 수원 군공항을 화옹지구로 이동만 하는 것은 화옹지구를 군사구역으로 묶어 더욱 낙후시키고 주민의 거주 및 정주 환경을 파괴하므로 반대해야 마땅합니다.</p>
+          <p>그러나 단순히 전투 비행장(군공항)을 옮기는 것을 넘어, 경기남부의 대규모 첨단 산업 물류를 운반하고 시민들의 항공 접근성을 높이는 <strong>민간 국제공항 건설을 병행</strong>하고, 화옹지구 인근의 <strong>경제 특화지구(경제자유구역) 지정, 지하철역 신설 및 철도 개통, 주변 도로 차선 획기적 확장 공사</strong>를 동시에 확보하는 '조건부 유치'가 실현된다면 엄청난 경제적 시너지가 창출될 것입니다.</p>
+          <p>이러한 인프라 투자는 만세구 화옹지구 주민들의 거주 문화를 비약적으로 향상시키고 고소득 일자리를 만들어, 외지로 나갔던 <strong>주민들의 자녀들이 자신의 고향으로 돌아와 마음껏 경제활동을 영위하는 젊고 번성하는 미래 도시</strong>로 거듭나게 할 것입니다. 이것이 맥킨지가 예견한 세계 3대 항구·관문도시 비전의 핵심입니다.</p>
+          <p>ICAO·한국항공대 연구에 따르면 인구 100만 기준 도시 인근 국제공항 1개는 <strong>직접 고용 8,000~12,000명, 간접·유발 고용 30,000~50,000명, 연간 지역 GDP 1.5~2.5조 원 증가</strong>를 유발합니다.</p>
+          <div class="strategy-card" style="margin-top:16px; padding:20px;">
+            <table class="data-table">
+              <thead><tr><th>편익 항목</th><th>화성시 기대 효과</th></tr></thead>
+              <tbody>
+                <tr><td>직접 고용</td><td>8,000~12,000명</td></tr>
+                <tr><td>간접·유발 고용</td><td>30,000~50,000명</td></tr>
+                <tr><td>시세수 증가</td><td>연 3,000억~5,000억 원</td></tr>
+                <tr><td>서남부 교통망 개선</td><td>GTX·신안산선 연장 가속</td></tr>
+                <tr><td>토지·주택 가치</td><td>30~80% 상승 (영종도 사례)</td></tr>
+                <tr><td>청년 일자리</td><td>5,000명 이상 귀환 정착</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>핵심 메시지:</strong> "수원 발전을 위한 공항"이 아닌 <strong>"화성 서남부 균형발전 국가 프로젝트"</strong>로 리프레이밍해야 합니다.</p>
+        </div>
+      </div>
+
+      <!-- 4. 생태·미래산업 가치 -->
+      <div class="pair-container reveal">
+        <div class="objection-block">
+          <h3><span class="obj-num">4</span>미래산업·생태 가치 훼손 주장</h3>
+          <p>화성시는 화옹지구 일대가 <strong>기아오토랜드·현대차연구소</strong> 등 미래 모빌리티 클러스터 지역이며, <strong>동아시아-대양주 철새이동경로(EAAF)</strong>와 관련된 주요 철새 도래지라는 점을 들어 공항 입지로 부적절하다고 주장합니다.</p>
+          <div class="source-cite">출처: <a href="https://www.newsis.com/view/NISX20260211_0003512088" target="_blank">뉴시스 (2026.02.11)</a></div>
+        </div>
+        <div class="objection-block response">
+          <h3><span class="obj-num" style="background:var(--green);">✓</span>설득 논리: 공존 모델 + 독립 검증</h3>
+          <p><strong>철새 서식지 문제:</strong> 인천국제공항은 영종도 갯벌과 철새 도래지에 인접해 건설되었음에도, 국제기준(ICAO Bird Strike 관리)과 생태보전구역 지정으로 공존에 성공했습니다. 화옹지구도 동일 모델 적용이 가능합니다.</p>
+          <p>네덜란드 스키폴 공항, 일본 간사이 공항은 모두 해안 간척지에 철새 도래지가 인접했으나 <strong>완충생태구역·인공습지 조성</strong>으로 EAAF 기준을 충족했습니다. (Scholten et al., 2017, EAAF Partnership Report)</p>
+          <p><strong>모빌리티 클러스터:</strong> 국제공항은 자동차·반도체 클러스터의 글로벌 연결성을 오히려 강화합니다. 독일 뮌헨 공항 인근 BMW 연구소, 프랑스 파리 CDG 공항 인근 르노 R&D가 이를 입증합니다.</p>
+        </div>
+      </div>
+
+      <!-- 5. 안전성 문제 -->
+      <div class="pair-container reveal">
+        <div class="objection-block">
+          <h3><span class="obj-num">5</span>안전성 및 항로 중첩 우려</h3>
+          <p>화성시와 정 시장 측은 <strong>조류충돌(Bird Strike) 위험</strong>과 <strong>인천국제공항 북측 항로와의 중첩 가능성</strong>을 주요 반대 근거로 제시하고 있습니다. 이는 단순한 민원이 아닌 항공 안전에 관한 기술적 우려입니다.</p>
+          <div class="source-cite">출처: <a href="https://www.newsis.com/view/NISX20260211_0003512088" target="_blank">뉴시스 (2026.02.11)</a></div>
+        </div>
+        <div class="objection-block response">
+          <h3><span class="obj-num" style="background:var(--green);">✓</span>설득 논리: 독립 안전 검증 요구</h3>
+          <p><strong>조류충돌 위험:</strong> 미국 FAA Advisory Circular AC 150/5200-33C에 따르면, 공항 반경 8km 내 조류 서식 밀도와 종류에 따라 활주로 방향·RNAV 항로 설계로 위험을 90% 이상 감소시킬 수 있습니다. 화옹지구는 서해 방향 이착륙 설계 시 철새 이동경로와의 직접 충돌을 최소화할 수 있습니다.</p>
+          <p><strong>인천공항 항로 중첩:</strong> 국토교통부 항공정책실의 초기 시뮬레이션에 따르면, 화옹지구 공항은 인천공항 남측 항로를 사용하므로 항로 분리가 기술적으로 가능합니다. 실제 인천-제주 항로와 화옹지구 이착륙 항로는 고도 분리(1,000ft 이상)로 충돌 위험이 없습니다.</p>
+          <p><strong>제안:</strong> 찬성 측이 먼저 <strong>제3의 독립 기관(ICAO 인증 항공안전 연구기관)</strong>에 의한 공개 안전성 평가를 요구하는 것이 신뢰를 높이는 전략입니다.</p>
+        </div>
+      </div>
+
+      <!-- 6. 매향리 역사적 상처 -->
+      <div class="pair-container reveal">
+        <div class="objection-block">
+          <h3><span class="obj-num">6</span>매향리의 역사적 상처</h3>
+          <p>화옹지구 인근 우정읍 매향리는 1951~2005년까지 54년간 <strong>미 공군 쿠니 폭격훈련장</strong>으로 사용되며 장기간 주민 피해를 겪은 지역입니다. 정 시장은 치유 노력이 이어지는 상황에서 또다시 군공항 이전을 추진하는 것은 역사적·인도적으로 부당하다고 강조합니다.</p>
+          <div class="source-cite">출처: <a href="https://gg.newdaily.co.kr/site/data/html/2026/02/11/2026021100481.html" target="_blank">뉴데일리 경기 (2026.02.11)</a></div>
+        </div>
+        <div class="objection-block response">
+          <h3><span class="obj-num" style="background:var(--green);">✓</span>설득 논리: 선행 치유·보상 패키지</h3>
+          <p>매향리 문제는 단순한 보상금으로 접근하면 역효과를 낳습니다. 민간단체는 공항 추진 이전에 <strong>다음 선행 조치를 국가에 요구</strong>해야 합니다:</p>
+          <ul style="margin-top:12px; padding-left:20px; display:flex; flex-direction:column; gap:8px;">
+            <li>매향리 평화생태공원 국가 관리 격상 및 예산 확대</li>
+            <li>과거 폭격 피해 주민 전수 건강 조사 및 의료 지원 기금 설치</li>
+            <li>마을 환경오염(토양·지하수) 공식 조사 및 복원 사업</li>
+            <li>매향리 역사박물관 건립 및 국가 차원 공식 사과</li>
+            <li>우정읍·향남읍 서남부 주민 우선 고용 보장 협약</li>
+          </ul>
+          <p style="margin-top:14px;">일본 오키나와 후텐마 기지 이전 협상 사례처럼, <strong>선행 보상·치유가 지역 설득의 전제조건</strong>이 되어야 합니다. (Aldrich, 2008, <em>Site Fights: Divisive Facilities and Civil Society in Japan</em>)</p>
+          <p><strong>핵심:</strong> 민간단체가 먼저 매향리 주민의 편에 서는 것이 장기적으로 공항 추진의 지역 신뢰를 얻는 길입니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 설득 전략 6가지 -->
+    <div class="strategy-section">
+      <h2>💡 민간단체의 6대 공론화 설득 전략</h2>
+
+      <div class="strategy-card reveal">
+        <h3>① 프레임 전환: '군공항 이전' → '독자 민간 국제공항'</h3>
+        <p>민간단체가 가장 먼저 해야 할 일은 <strong>프레임 전환</strong>입니다. 현재 화성시민들은 이 사업을 "수원을 위해 화성이 희생하는 군공항 이전"으로 인식합니다.</p>
+        <p>새로운 공식 입장: <em>"우리는 수원군공항 화성 이전을 지지하지 않습니다. 우리는 경기남부 1,000만 주민과 반도체·물류 산업을 위한 순수 민간 국제공항을 화옹지구에 건설하자는 입장입니다."</em></p>
+        <div class="evidence-box">
+          <p><strong>근거:</strong> 2024년 경기도 연구용역(한국교통연구원)은 화옹지구가 군공항 없는 <strong>순수 민간공항으로도 타당성이 충족</strong>됨을 확인했습니다. 연간 여객 수요 1,500만 명 처리 가능.</p>
+        </div>
+      </div>
+
+      <div class="strategy-card reveal delay-1">
+        <h3>② 화성시민 기준 순편익 계량화</h3>
+        <p>반대 측의 "수원은 이익, 화성은 피해" 프레임을 깨려면 <strong>화성시민이 얻는 편익을 구체적 수치로 제시</strong>해야 합니다.</p>
+        <ul>
+          <li>직접 고용 8,000~12,000명 중 화성시민 우선 채용 비율 60% 설정 시 → 4,800~7,200명</li>
+          <li>공항세·부지 임대료 화성시 귀속 연간 1,000억~2,000억 원</li>
+          <li>화성 서남부(우정읍·향남읍·팔탄면) 인구 유입 10년 내 10만 명 증가 예측</li>
+          <li>GTX-D 연장·신안산선 서부 연결 및 지하철역 개통 시 교통 소외 완전 해소</li>
+          <li>화옹지구 주변 간선 도로망 6~8차선 확장 공사로 물류 및 이동 쾌속망 구축</li>
+          <li>화옹지구 배후 도시 및 경제 특화지구 형성 시 지역 상권 매출 30~50% 증가</li>
+          <li>주거 문화 및 정주 환경의 혁신적 발전으로 자녀 세대가 다시 고향으로 돌아와 활발한 경제활동을 하는 선순환 구축</li>
+        </ul>
+        <div class="evidence-box">
+          <p><strong>참고 사례:</strong> 인천 영종도는 2001년 개항 후 10년간 인구 5만 → 10만 증가, 지가 평균 80% 상승, 지방세 수입 3배 증가 (인천발전연구원, 2012)</p>
+        </div>
+      </div>
+
+      <div class="strategy-card reveal delay-2">
+        <h3>③ 환경·철새·안전성 문제 — 독립 제3기관 공개 검증 요구</h3>
+        <p>"문제없다"는 주장보다 <strong>"검증하자"는 요구가 더 신뢰를 높입니다</strong>. 찬성 측이 먼저 독립 검증을 요구하면 화성시가 거부하기 어려워집니다.</p>
+        <ul>
+          <li>ICAO 공인 항공안전 연구기관의 조류충돌 위험 평가 공개 실시</li>
+          <li>국립환경과학원의 철새 이동경로 영향 독립 평가</li>
+          <li>국토부 항공안전기술원의 항로 중첩 시뮬레이션 공개 결과 발표</li>
+          <li>화옹지구 토양·수질 기초 환경조사 선행 실시</li>
+        </ul>
+        <div class="evidence-box">
+          <p><strong>전략적 효과:</strong> 독립 검증 결과 안전성이 확인될 경우 반대 논거가 무력화됩니다. 결과가 불확실하다면 설계 수정으로 대응할 수 있어, 찬성 측에 유리한 구조를 만듭니다.</p>
+        </div>
+      </div>
+
+      <div class="strategy-card reveal">
+        <h3>④ 매향리·우정읍 주민 치유와 보상 선행 요구</h3>
+        <p>공항 찬성 이전에 매향리 주민의 역사적 피해 회복을 먼저 요구하는 것이 <strong>도덕적 우위를 확보하는 전략</strong>입니다. 이렇게 해야 매향리 주민들이 공항 추진에 반대하는 최전선이 되지 않습니다.</p>
+        <ul>
+          <li>매향리 평화생태공원 국가 직접 관리 전환 및 예산 3배 확충</li>
+          <li>국가 차원 공식 사과 및 피해 주민 위로금 지급</li>
+          <li>주민 전수 건강검진 및 10년간 의료비 국가 지원</li>
+          <li>공항 건설 시 매향리·우정읍 주민 우선 고용 법적 보장</li>
+          <li>지역사회기금(Community Benefit Fund) 연간 100억 원 설치</li>
+        </ul>
+        <div class="evidence-box">
+          <p><strong>참고:</strong> 영국 히스로 공항 확장 시 지역주민기금(£2.5억 파운드) 설치, 일본 간사이 공항 오사카 어민 보상금·재정착 패키지가 지역 설득의 핵심이었습니다.</p>
+        </div>
+      </div>
+
+      <div class="strategy-card reveal delay-1">
+        <h3>⑤ 공론화위원회·주민 참여 절차 먼저 요구</h3>
+        <p>정 시장의 자치권 논리를 역이용합니다. "시장님이 결정하라"가 아닌 <strong>"화성시민이 충분한 정보로 직접 판단할 수 있게 하자"</strong>는 방향을 취해야 합니다.</p>
+        <ul>
+          <li>경기도·국토부·화성시·전문가·시민단체 동수 참여 공론화위원회 구성</li>
+          <li>화성 서남부 권역별(우정읍·향남읍·팔탄면·비봉면) 주민 설명회 개최</li>
+          <li>찬반 동수 전문가 토론회 TV 공개 중계</li>
+          <li>독립 여론조사 기관의 화성시민 정기 여론조사 공개</li>
+          <li>시민배심원단 운영 및 권고안 발표</li>
+          <li>최종 주민투표 가능성 열어두기</li>
+        </ul>
+        <div class="evidence-box">
+          <p><strong>핵심:</strong> 절차적 투명성을 먼저 확보하면 정 시장이 "자치권 침해"를 더 이상 명분으로 삼기 어렵습니다. 민주적 공론화 절차 자체가 정당성의 근거가 됩니다.</p>
+        </div>
+      </div>
+
+      <div class="strategy-card reveal delay-2">
+        <h3>⑥ 정 시장에게 '조건부 검토' 명분을 제공</h3>
+        <p>현실적으로 정 시장이 단기간에 "찬성"으로 돌아서는 것은 정치적으로 불가능합니다. <strong>1차 목표는 다음 발언을 끌어내는 것</strong>으로 설정해야 합니다:</p>
+        <div class="evidence-box" style="margin:16px 0;">
+          <p style="font-style:italic; font-size:1rem;">"화성시민의 동의, 환경·안전성 독립 검증, 충분한 선행 보상과 지역발전 대책, 군공항 문제의 합리적 분리가 전제된다면, 경기남부 국제공항의 필요성을 객관적으로 검토할 수 있다."</p>
+        </div>
+        <p>이 정도의 <strong>조건부 검토 프레임</strong>을 이끌어내는 것이 공론화 운동의 1단계입니다. 이후 각 조건을 하나씩 충족시켜 나가는 중장기 전략을 구사해야 합니다.</p>
+        <p>정치적으로 검토해보면, 정 시장의 재선(2026.06.03) 직후 임기 초반인 지금이 <strong>조건부 검토 협의를 제안하기 가장 좋은 시점</strong>입니다. 임기 말보다 초반에 정치적 부담이 적기 때문입니다.</p>
+      </div>
+    </div>
+
+    <!-- 결론 -->
+    <div class="conclusion-box reveal">
+      <h2>🎯 결론: 단계별 설득 로드맵</h2>
+      <p>민간단체의 설득 운동은 <strong>3단계</strong>로 구성되어야 합니다.</p>
+      <div class="quote">
+        <strong>1단계 (2026~2027):</strong> 프레임 전환 + 매향리 선행 치유 요구 + 독립 검증 요구<br/>
+        → 목표: 정 시장의 "조건부 검토" 발언 유도<br/><br/>
+        <strong>2단계 (2027~2028):</strong> 공론화위원회 구성 + 시민 순편익 계량화 발표 + 안전 검증 완료<br/>
+        → 목표: 화성시 공식 협의 테이블 참여<br/><br/>
+        <strong>3단계 (2028~2030):</strong> 예비타당성 조사 착수 촉구 + 주민 설명회 + 지역발전 패키지 협약<br/>
+        → 목표: 화성시 동의 하에 국토부 공식 검토 개시
+      </div>
+      <p>단순한 "공항 찬성 캠페인"이 아닌, <strong>반대 논거를 하나씩 해소하는 체계적 공론화 운동</strong>이 결국 경기남부 국제공항 화옹지구 건설을 현실로 만드는 길입니다.</p>
+      <div class="tag-row" style="justify-content:center; margin-top:24px;">
+        <span class="tag-item">절차적 정당성 확보</span>
+        <span class="tag-item">군공항 분리 추진</span>
+        <span class="tag-item green">화성시민 순편익 입증</span>
+        <span class="tag-item green">환경·안전 독립 검증</span>
+        <span class="tag-item">매향리 선행 치유</span>
+        <span class="tag-item green">민주적 공론화</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 화성화옹지구 서부발전협의회 (HHWSDC)</p>
+      <p><a href="mailto:hhwsdc@gmail.com" style="color:var(--gold)">hhwsdc@gmail.com</a></p>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

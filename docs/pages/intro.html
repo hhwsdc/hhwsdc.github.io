@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
@@ -86,6 +86,276 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- ===== TIMELINE / 연혁 ===== -->
+<style>
+  /* ---- Timeline wrapper ---- */
+  .timeline-section { padding: 6rem 0 7rem; background: linear-gradient(180deg,#0a1628 0%,#071020 100%); }
+  .timeline-section .section-title { text-align:center; color:#fff; margin-bottom:.6rem; }
+  .timeline-section .section-sub   { text-align:center; color:rgba(255,255,255,.55); font-size:.95rem; margin-bottom:4rem; }
+
+  /* ---- Central spine ---- */
+  .timeline { position:relative; max-width:860px; margin:0 auto; padding:0 1.5rem; }
+  .timeline::before {
+    content:''; position:absolute; left:50%; top:0; bottom:0;
+    width:2px; background:linear-gradient(180deg,var(--gold,#c9a84c) 0%,rgba(201,168,76,.15) 100%);
+    transform:translateX(-50%);
+  }
+
+  /* ---- Individual item ---- */
+  .tl-item {
+    display:flex; justify-content:flex-end; width:50%;
+    padding-right:3rem; position:relative; margin-bottom:3rem;
+  }
+  .tl-item.right { justify-content:flex-start; margin-left:50%; padding-right:0; padding-left:3rem; }
+
+  /* ---- Node dot ---- */
+  .tl-item::before {
+    content:''; position:absolute; right:-9px; top:1.3rem;
+    width:16px; height:16px; border-radius:50%;
+    background:var(--gold,#c9a84c); border:3px solid #0a1628;
+    box-shadow:0 0 10px rgba(201,168,76,.6);
+  }
+  .tl-item.right::before { right:auto; left:-9px; }
+
+  /* ---- Card ---- */
+  .tl-card {
+    background:rgba(255,255,255,.04); border:1px solid rgba(201,168,76,.2);
+    border-radius:14px; padding:1.4rem 1.6rem; max-width:360px; width:100%;
+    transition:transform .3s, box-shadow .3s;
+  }
+  .tl-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,0,0,.35); }
+
+  .tl-date {
+    font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--gold,#c9a84c); margin-bottom:.4rem;
+  }
+  .tl-title { font-size:1rem; font-weight:700; color:#fff; margin-bottom:.5rem; line-height:1.4; }
+  .tl-body  { font-size:.82rem; color:rgba(220,215,200,.8); line-height:1.65; }
+  .tl-body li { margin-bottom:.25rem; padding-left:.15rem; }
+  .tl-badge {
+    display:inline-block; font-size:.68rem; font-weight:700; letter-spacing:.06em;
+    padding:.18rem .6rem; border-radius:20px; margin-bottom:.6rem;
+    background:rgba(201,168,76,.18); color:var(--gold,#c9a84c); border:1px solid rgba(201,168,76,.35);
+  }
+
+  /* ---- Milestone marker (full-width) ---- */
+  .tl-milestone {
+    width:100%; display:flex; justify-content:center;
+    position:relative; margin-bottom:3rem;
+  }
+  .tl-milestone-inner {
+    background:linear-gradient(90deg,rgba(201,168,76,.15),rgba(201,168,76,.3),rgba(201,168,76,.15));
+    border:1px solid rgba(201,168,76,.4); border-radius:30px;
+    padding:.45rem 1.4rem; font-size:.8rem; font-weight:700;
+    color:var(--gold,#c9a84c); letter-spacing:.06em;
+  }
+
+  /* ---- Responsive ---- */
+  @media(max-width:680px) {
+    .timeline::before { left:14px; }
+    .tl-item, .tl-item.right { width:100%; margin-left:0; padding-left:2.8rem; padding-right:0; justify-content:flex-start; }
+    .tl-item::before, .tl-item.right::before { right:auto; left:6px; }
+    .tl-card { max-width:100%; }
+  }
+</style>
+
+<section class="timeline-section" id="history">
+  <div class="container">
+    <div class="section-tag" style="text-align:center;margin-bottom:.8rem;">연혁 · History</div>
+    <h2 class="section-title">화서협 온라인 활동 연혁</h2>
+    <p class="timeline-section section-sub">2025년 9월 창설 이후 화옹지구 공항 유치를 위한 주요 온라인 활동 기록</p>
+
+    <div class="timeline">
+
+      <!-- 2025 Q3 -->
+      <div class="tl-milestone">
+        <div class="tl-milestone-inner">📅 2025년 3분기 (7 – 9월)</div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-card">
+          <div class="tl-date">2025. 09</div>
+          <div class="tl-badge">🚀 창설·출범</div>
+          <div class="tl-title">화서협 공식 온라인 홈페이지 개설</div>
+          <div class="tl-body">
+            <ul>
+              <li>GitHub Pages 기반 공식 사이트 <em>hhwsdc.github.io</em> 오픈</li>
+              <li>협의회 소개·설립 목적·핵심 목표 페이지 게시</li>
+              <li>공식 이메일 <em>hhwsdc@gmail.com</em> 개통, 시민 문의 채널 마련</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item right reveal delay-1">
+        <div class="tl-card">
+          <div class="tl-date">2025. 09</div>
+          <div class="tl-badge">📄 콘텐츠</div>
+          <div class="tl-title">화옹지구 당위성 자료 온라인 공개</div>
+          <div class="tl-body">
+            <ul>
+              <li>입지 분석·교통 접근성·간척지 규모 등 실증 자료 게시</li>
+              <li>ICAO 모델 기반 경제 파급효과 예비 추산치 공개</li>
+              <li>자료실 섹션 초기 구축 — PDF 정책 제안서 업로드</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2025 Q4 -->
+      <div class="tl-milestone">
+        <div class="tl-milestone-inner">📅 2025년 4분기 (10 – 12월)</div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-card">
+          <div class="tl-date">2025. 10</div>
+          <div class="tl-badge">📊 정책</div>
+          <div class="tl-title">경기남부 국제공항 정책 제안서 v1.0 온라인 게시</div>
+          <div class="tl-body">
+            <ul>
+              <li>화옹지구 입지·소음 해결 방안 종합 정책 제안서 공개</li>
+              <li>국토교통부·경기도·화성시 공식 제출 사실 홈페이지 고지</li>
+              <li>소음 저감 설계 3단계 로드맵 다이어그램 게시</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item right reveal delay-1">
+        <div class="tl-card">
+          <div class="tl-date">2025. 11</div>
+          <div class="tl-badge">🌐 홍보</div>
+          <div class="tl-title">경제적 효과 심층 분석 페이지 공개</div>
+          <div class="tl-body">
+            <ul>
+              <li>고용창출 8만 명·GDP 2배 성장 등 정량 수치 상세 공개</li>
+              <li>인천 영종도·후쿠오카·싱가포르 창이 국내외 사례 비교 게시</li>
+              <li>세대별 혜택 타임라인(노년층·현직·청년·자녀) 시각화</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal delay-2">
+        <div class="tl-card">
+          <div class="tl-date">2025. 12</div>
+          <div class="tl-badge">✍️ 여론</div>
+          <div class="tl-title">시민 의견 수렴 채널 개설 및 공개 서한 발신</div>
+          <div class="tl-body">
+            <ul>
+              <li>온라인 문의·의견 제출 폼(contactform) 운영 시작</li>
+              <li>화성시의회·경기도의회 의원 대상 공개 서한 홈페이지 게재</li>
+              <li>자료실 백서(White Paper) v0.9 초안 업로드</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2026 Q1 -->
+      <div class="tl-milestone">
+        <div class="tl-milestone-inner">📅 2026년 1분기 (1 – 3월)</div>
+      </div>
+
+      <div class="tl-item right reveal">
+        <div class="tl-card">
+          <div class="tl-date">2026. 01</div>
+          <div class="tl-badge">📋 전략</div>
+          <div class="tl-title">추진 전략 로드맵 페이지 신설</div>
+          <div class="tl-body">
+            <ul>
+              <li>제7차 공항개발 종합계획(2026~2030) 반영 추진 전략 공개</li>
+              <li>타당성 조사 촉구 온라인 서명 캠페인 1차 집계 결과 게시</li>
+              <li>비전 선언문(Vision Statement) 공개 및 홈페이지 배너 적용</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal delay-1">
+        <div class="tl-card">
+          <div class="tl-date">2026. 02</div>
+          <div class="tl-badge">🔊 캠페인</div>
+          <div class="tl-title">소음 해결 전략 전문 페이지 오픈</div>
+          <div class="tl-body">
+            <ul>
+              <li>해외 선진 소음 관리 사례(나리타·히스로·창이) 비교 분석 게시</li>
+              <li>주민 우려 Q&A 형식 팩트체크 섹션 공개</li>
+              <li>소음 영향권 시뮬레이션 지도 이미지 첫 게재</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item right reveal delay-2">
+        <div class="tl-card">
+          <div class="tl-date">2026. 03</div>
+          <div class="tl-badge">🏛️ 청원</div>
+          <div class="tl-title">정부24 공식 청원 제출 및 홈페이지 전파</div>
+          <div class="tl-body">
+            <ul>
+              <li>국토교통부·경기도·화성시 3개 기관 공식 청원서 제출 (2026.03.21)</li>
+              <li>청원 내용·첨부 자료 전문 홈페이지 공개</li>
+              <li>시민 청원 서명 참여 독려 배너·팝업 첫 적용</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2026 Q2 -->
+      <div class="tl-milestone">
+        <div class="tl-milestone-inner">📅 2026년 2분기 (4 – 6월) · 현재</div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-card">
+          <div class="tl-date">2026. 04</div>
+          <div class="tl-badge">🗳️ 청원24</div>
+          <div class="tl-title">청원24 서명 참여 전용 페이지 신설</div>
+          <div class="tl-body">
+            <ul>
+              <li><em>cheongwon.go.kr</em> 5단계 서명 가이드 페이지 오픈</li>
+              <li>KakaoTalk·링크 복사 공유 기능 탑재, 시민 확산 촉진</li>
+              <li>서명 목표 5만 명 카운터 배지 첫 게재</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item right reveal delay-1">
+        <div class="tl-card">
+          <div class="tl-date">2026. 05</div>
+          <div class="tl-badge">🔄 사이트 개편</div>
+          <div class="tl-title">홈페이지 전면 리뉴얼 · 메뉴 체계 정비</div>
+          <div class="tl-body">
+            <ul>
+              <li>내비게이션 개편 — "문의하기" + "청원 참여" CTA 분리</li>
+              <li>관련 기관(국토부·경기도·화성시) 유관 부서 상세 정보 추가</li>
+              <li>전체 12개 HTML 페이지 디자인·접근성 일괄 개선</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal delay-2">
+        <div class="tl-card" style="border-color:rgba(201,168,76,.5);">
+          <div class="tl-date">2026. 06 · 현재</div>
+          <div class="tl-badge" style="background:rgba(201,168,76,.3);">🔵 진행 중</div>
+          <div class="tl-title">청원 서명 확산 지속 · 추가 콘텐츠 강화</div>
+          <div class="tl-body">
+            <ul>
+              <li>화서협 홈페이지 연혁·활동 투명 공개 (현재 페이지)</li>
+              <li>청원24 서명 참여 독려 온라인 캠페인 지속 운영</li>
+              <li>추가 정책 보고서·언론 보도자료 자료실 업데이트 예정</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.timeline -->
+  </div><!-- /.container -->
 </section>
 
 <footer class="footer">

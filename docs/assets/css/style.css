@@ -177,8 +177,9 @@ h1, h2, h3, h4 {
 }
 
 .logo-stamp {
-  width: 42px;
   height: 42px;
+  width: auto;
+  max-width: 160px;
   object-fit: contain;
   filter: drop-shadow(0 0 8px rgba(200,150,42,0.4));
 }

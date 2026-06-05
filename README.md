@@ -1,5 +1,9 @@
 # HHWSDC - 화성화옹지구 서부발전협의회 공식 웹사이트
 
+<p align="center">
+  <img src="hhwsdc-logo.png" alt="HHWSDC Logo" width="450">
+</p>
+
 [화성화옹지구 서부발전협의회 공식 웹사이트](https://hhwsdc.github.io/)
 
 경기남부권의 항공수요, 물류 경쟁력, 그리고 수도권 남부와 서해안권의 균형발전을 도모하기 위한 화성화옹지구 서부발전협의회(HHWSDC)의 공식 웹페이지 저장소입니다.

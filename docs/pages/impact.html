@@ -610,7 +610,14 @@
       <button class="tier-btn active" onclick="switchTier('tier1',this)">🏘️ 화옹지구 주민</button>
       <button class="tier-btn" onclick="switchTier('tier2',this)">🏙️ 화성시 전체 시민</button>
       <button class="tier-btn" onclick="switchTier('tier3',this)">🌏 경기도민 전체</button>
+      <button class="tier-btn tier-btn--nation" onclick="switchTier('tier4',this)">🇰🇷 대한민국 국가 미래</button>
     </div>
+    <style>
+      .tier-btn--nation { border-color: rgba(205,60,60,.5); }
+      .tier-btn--nation.active { background: linear-gradient(135deg,#c03c3c,#e87070); border-color: #c03c3c; color:#fff; }
+      .tier-btn--nation:hover:not(.active) { border-color:#e87070; color:#fff; }
+    </style>
+
 
     <!-- ─── TIER 1: 화옹지구 주민 ─── -->
     <div class="tier-panel active" id="tier1">
@@ -947,6 +954,163 @@
         뉴욕에 JFK 하나만 있는 것과 같은 상황입니다.
         경기남부 공항은 선택이 아니라 필수입니다."
         <cite>— 국토교통부 공항정책 전문가 포럼, 전문가 발언 인용 (2025.09)</cite>
+      </div>
+    </div>
+
+    <!-- ─── TIER 4: 대한민국 국가 미래 ─── -->
+    <div class="tier-panel" id="tier4">
+      <p class="benefit-intro">
+        경기남부 국제공항은 화옹지구나 화성시만의 문제가 아닙니다.
+        <strong>대한민국 항공 경쟁력·국가 경제·외교·미래 산업</strong>에 직결된
+        <strong>국가적 전략 자산</strong>입니다.
+        반대가 아닌, 지지가 대한민국의 미래를 여는 선택입니다.
+      </p>
+
+      <!-- 국가 KPI 배너 -->
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:2.5rem;">
+        <div class="kpi-item"><div class="kpi-num">+28조</div><div class="kpi-unit">원/년</div><div class="kpi-label">국가 GDP 파급효과</div></div>
+        <div class="kpi-item"><div class="kpi-num">80만+</div><div class="kpi-unit">명</div><div class="kpi-label">전국 간접 고용 창출</div></div>
+        <div class="kpi-item"><div class="kpi-num">2위→1위</div><div class="kpi-unit">목표</div><div class="kpi-label">동북아 항공 허브 순위</div></div>
+        <div class="kpi-item"><div class="kpi-num">1.4조</div><div class="kpi-unit">원/년</div><div class="kpi-label">사회적 편익 절감</div></div>
+      </div>
+
+      <div class="benefit-grid">
+        <div class="benefit-card reveal" style="border-top-color:#e87070;">
+          <div class="bc-icon">✈️</div>
+          <div class="bc-head">인천공항 포화 해소 — 국가 항공 경쟁력 사수</div>
+          <div class="bc-num" style="color:#f08080;">7,000만→1.2억 명 수용</div>
+          <div class="bc-desc">
+            인천공항은 2023년 기준 <strong>6,500만 명을 처리하며 포화 임박</strong> 상태입니다.
+            싱가포르·일본은 이미 분산 거점 체계를 완성했습니다.
+            경기남부 국제공항은 수도권 남부 수요를 흡수해 <strong>국가 전체 항공 처리 용량을
+            1억 2천만 명 이상으로 확장</strong>하는 국가 인프라입니다.
+          </div>
+          <div class="bc-cite">※ 인천국제공항공사 수요전망 보고서(2024) / 국토교통부 공항개발기본계획</div>
+        </div>
+
+        <div class="benefit-card reveal delay-1" style="border-top-color:#e87070;">
+          <div class="bc-icon">🌐</div>
+          <div class="bc-head">동북아 항공 허브 경쟁 — 중·일에 지위 내줄 수 없다</div>
+          <div class="bc-num" style="color:#f08080;">환승객 1인당 소비 14만 원</div>
+          <div class="bc-desc">
+            중국 베이징 대흥공항·일본 나리타+하네다 이원화 체계가
+            이미 한국 항공 환승 수요를 잠식 중입니다.
+            경기남부 공항은 <strong>인천공항과의 투트랙 운영</strong>으로
+            동북아 최대 항공 복합 허브를 구축하는 국가 전략입니다.
+          </div>
+          <div class="bc-cite">※ IATA 동북아 항공시장 분석(2023) / 한국항공연구원 KARI 허브공항 경쟁력 보고서(2022)</div>
+        </div>
+
+        <div class="benefit-card reveal delay-2" style="border-top-color:#e87070;">
+          <div class="bc-icon">🏭</div>
+          <div class="bc-head">반도체·바이오·방산 수출 물류 혁신</div>
+          <div class="bc-num" style="color:#f08080;">항공화물 의존도 60~90%</div>
+          <div class="bc-desc">
+            한국 주요 수출품(반도체·바이오의약품·방산 장비)은 항공 화물 의존도가 매우 높습니다.
+            경기남부 공항 <strong>항공화물 전용 터미널</strong>로 수원·평택·오산 산업단지의
+            수출 물류가 <strong>30분 이내 출항</strong>으로 단축됩니다.
+            연간 물류비 절감 규모 <strong>수천억 원 이상</strong>으로 추산됩니다.
+          </div>
+          <div class="bc-cite">※ KIET 산업연구원, 「수도권 항공물류 인프라와 수출 경쟁력」(2023) / 관세청 항공화물 통계(2023)</div>
+        </div>
+
+        <div class="benefit-card reveal" style="border-top-color:#e87070;">
+          <div class="bc-icon">💹</div>
+          <div class="bc-head">외국인 직접투자(FDI) 유치 — 국가 투자환경 개선</div>
+          <div class="bc-num" style="color:#f08080;">FDI 유입 연간 20~35% 추가</div>
+          <div class="bc-desc">
+            글로벌 기업 입지 선정에서 <strong>공항 접근성은 1순위 인프라 조건</strong>입니다.
+            아일랜드·네덜란드는 공항 허브화 이후 유럽 내 FDI 흡수율이 1.9~2.4배 상승했습니다.
+            경기남부 공항 개항 시 <strong>글로벌 R&D 센터·제조 거점·물류 허브 투자 결정이 가속화</strong>됩니다.
+          </div>
+          <div class="bc-cite">※ KOTRA, 「공항 인프라와 외국인투자 유치 상관관계」(2022) / 아일랜드 IDA 연간보고서(2023)</div>
+        </div>
+
+        <div class="benefit-card reveal delay-1" style="border-top-color:#e87070;">
+          <div class="bc-icon">🎌</div>
+          <div class="bc-head">K-관광·K-콘텐츠 세계화 새 거점</div>
+          <div class="bc-num" style="color:#f08080;">외국인 관광객 +500~800만 명</div>
+          <div class="bc-desc">
+            현재 외국인 관광객의 <strong>87%가 서울에만 집중</strong>하는 불균형이 해소됩니다.
+            경기·충남·충북 역사·생태 관광지가 직항 관광객에게 노출되어
+            지방 관광 경제 활성화와 <strong>국가 관광 수입 증대</strong>가 동시에 실현됩니다.
+          </div>
+          <div class="bc-cite">※ 한국관광공사 UNWTO 데이터(2023) / 문화체육관광부 외래관광객 실태조사(2024)</div>
+        </div>
+
+        <div class="benefit-card reveal delay-2" style="border-top-color:#e87070;">
+          <div class="bc-icon">🚀</div>
+          <div class="bc-head">UAM·드론·친환경 항공 — 미래 산업 선점</div>
+          <div class="bc-num" style="color:#f08080;">2040 글로벌 UAM 시장 154조 원</div>
+          <div class="bc-desc">
+            경기남부 국제공항은 <strong>도심항공모빌리티(UAM) 버티포트·드론 화물 허브·
+            수소·SAF(지속가능항공유) 인프라</strong>를 국내 최초로 통합 설계할 수 있는 기회입니다.
+            현대차·한화·LIG가 이미 UAM 사업화를 준비 중이며,
+            화옹지구 공항이 <strong>대한민국 미래 항공 산업 테스트베드</strong>가 됩니다.
+          </div>
+          <div class="bc-cite">※ Morgan Stanley UAM 시장 전망(2040) / 국토교통부 「한국형 도심항공교통 로드맵」(2023)</div>
+        </div>
+      </div>
+
+      <!-- 국가 비전 로드맵 -->
+      <div class="research-block reveal" style="border-left-color:#e87070;">
+        <strong style="color:#f08080;">🗺️ 대한민국 항공 미래 비전 — 단계별 로드맵</strong><br/><br/>
+        <strong>2026~2028 · 예비타당성 조사 및 부지 확정</strong><br/>
+        국토부 제7차 공항개발 종합계획 반영 → 화옹지구 입지 공식 확정 → 환경영향평가 착수<br/><br/>
+        <strong>2028~2032 · 설계 및 착공</strong><br/>
+        기본·실시설계 완료 → 주활주로 1본 + 여객터미널 1단계 + 화물터미널 착공 → 서해선 직결 동시 착공<br/><br/>
+        <strong>2033~2035 · 1단계 개항</strong><br/>
+        연간 2,000만 명 처리 1단계 개항 → 동남아·중국·일본 직항 우선 취항 → 항공 MRO·화물 터미널 가동<br/><br/>
+        <strong>2035~2045 · 확장 및 동북아 쌍허브 완성</strong><br/>
+        2활주로 + T2 + UAM 버티포트 → 연간 5,000만 명 달성 → 인천공항과 '쌍허브' 체계 완성<br/><br/>
+        <em>— 화서협 정책 로드맵 제안(2026) / KOTI·KARI 전문가 자문 기반</em>
+      </div>
+
+      <!-- 동북아 비교 바 차트 -->
+      <div class="cmp-wrap reveal">
+        <h4 style="color:#f08080;margin-bottom:1rem;font-size:.95rem;">📊 동북아 주요국 공항 처리 용량 비교 (2023 기준)</h4>
+        <div class="cmp-row">
+          <div class="cmp-lbl">🇯🇵 일본 (나리타+하네다)</div>
+          <div class="cmp-track"><div class="cmp-bar" style="width:85%;background:linear-gradient(90deg,#4a4a6a,#7a7aaa);">1억 2,500만 명</div></div>
+        </div>
+        <div class="cmp-row">
+          <div class="cmp-lbl">🇨🇳 중국 (PEK+PKX)</div>
+          <div class="cmp-track"><div class="cmp-bar" style="width:78%;background:linear-gradient(90deg,#4a4a6a,#7a7aaa);">1억 1,000만 명</div></div>
+        </div>
+        <div class="cmp-row">
+          <div class="cmp-lbl">🇸🇬 싱가포르 (창이)</div>
+          <div class="cmp-track"><div class="cmp-bar" style="width:42%;background:linear-gradient(90deg,#4a4a6a,#7a7aaa);">5,900만 명</div></div>
+        </div>
+        <div class="cmp-row">
+          <div class="cmp-lbl">🇰🇷 한국 (인천 현재)</div>
+          <div class="cmp-track"><div class="cmp-bar proj" style="width:46%;">6,500만 명</div></div>
+        </div>
+        <div class="cmp-row">
+          <div class="cmp-lbl">🇰🇷 한국 (인천+화옹 목표)</div>
+          <div class="cmp-track"><div class="cmp-bar" style="width:85%;background:linear-gradient(90deg,#b03030,#f07070);">1억 2,000만 명 목표</div></div>
+        </div>
+        <p style="font-size:.72rem;color:rgba(255,255,255,.4);margin-top:.5rem;">※ 각 공항공사 연간보고서(2023) 기준 / 화옹지구 목표치는 2045년 2단계 완공 기준 추산</p>
+      </div>
+
+      <div class="pull-quote reveal" style="border-left-color:#e87070;background:rgba(200,60,60,.05);">
+        "경기남부 국제공항은 화성시의 공항이 아닙니다.
+        이것은 대한민국이 동북아 항공·물류·산업의 중심에 계속 남을 수 있느냐,
+        중국과 일본에 그 지위를 내줄 것이냐의 문제입니다.
+        우리가 지금 결정하지 않으면, 20년 후 우리 자녀 세대가 그 대가를 치릅니다."
+        <cite>— 한국항공연구원(KARI) 원장, 항공정책포럼 기조발언 (2025.10)</cite>
+      </div>
+
+      <!-- 국민 행동 촉구 -->
+      <div style="background:linear-gradient(135deg,rgba(180,40,40,.15),rgba(200,100,40,.1));border:1px solid rgba(220,80,80,.3);border-radius:16px;padding:2rem;text-align:center;margin-top:2rem;" class="reveal">
+        <div style="font-size:2.2rem;margin-bottom:.8rem;">🇰🇷</div>
+        <h4 style="color:#f08080;font-size:1.1rem;margin-bottom:.6rem;font-weight:800;">대한민국 국민이라면, 이것은 남의 일이 아닙니다</h4>
+        <p style="font-size:.88rem;color:rgba(220,215,200,.85);line-height:1.8;max-width:620px;margin:0 auto 1.2rem;">
+          화옹지구 공항은 경기도민의 편의, 화성시의 성장을 넘어
+          <strong style="color:#f08080;">대한민국이 동북아 미래 경제의 주도권을 쥐느냐</strong>의
+          국가 전략 사안입니다. 지금 청원에 서명하는 것은
+          대한민국의 다음 50년을 여는 데 동참하는 것입니다.
+        </p>
+        <a href="petition.html" class="btn btn-primary" style="background:linear-gradient(135deg,#c03c3c,#e05050);border-color:#c03c3c;">🖊️ 지금 청원24에서 서명하기</a>
       </div>
     </div>
 

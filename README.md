@@ -1,7 +1,7 @@
 # HHWSDC - 화성화옹지구 서부발전협의회 공식 웹사이트
 
 <p align="center">
-  <img src="hhwsdc-logo.png" alt="HHWSDC Logo" width="450">
+  <img src="docs/assets/img/hhwsdc-logo.png" alt="HHWSDC Logo" width="450">
 </p>
 
 [화성화옹지구 서부발전협의회 공식 웹사이트](https://hhwsdc.github.io/)

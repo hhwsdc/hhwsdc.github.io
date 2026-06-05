@@ -8,7 +8,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css" />
-</head>
+  <style>
+    .contact-item--wide { align-items: flex-start; }
+    .ci-orgs { display: flex; flex-direction: column; gap: 0.55rem; }
+    .ci-org  { display: flex; flex-direction: column; gap: 0.15rem; }
+    .ci-org-name {
+      font-weight: 700;
+      color: var(--gold, #c9a84c);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: opacity .2s;
+    }
+    .ci-org-name:hover { opacity: .75; text-decoration: underline; }
+    .ci-org-dept {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,.6);
+      line-height: 1.4;
+    }
+  </style>
+
 <body>
 <nav class="navbar scrolled" id="navbar">
   <div class="nav-inner">
@@ -59,9 +77,22 @@
             <span class="ci-label">📧 공식 이메일</span>
             <a href="mailto:hhwsdc@gmail.com" class="ci-value">hhwsdc@gmail.com</a>
           </div>
-          <div class="contact-item">
+          <div class="contact-item contact-item--wide">
             <span class="ci-label">🏛️ 관련 기관</span>
-            <span class="ci-value">국토교통부 · 경기도 · 화성시</span>
+            <div class="ci-value ci-orgs">
+              <div class="ci-org">
+                <a href="https://www.molit.go.kr" target="_blank" rel="noopener" class="ci-org-name">국토교통부</a>
+                <span class="ci-org-dept">항공정책관실 · 공항시설과 · 공항개발정책과</span>
+              </div>
+              <div class="ci-org">
+                <a href="https://www.gg.go.kr" target="_blank" rel="noopener" class="ci-org-name">경기도</a>
+                <span class="ci-org-dept">교통국 항공물류과 · 균형발전기획관실</span>
+              </div>
+              <div class="ci-org">
+                <a href="https://www.hwaseong.go.kr" target="_blank" rel="noopener" class="ci-org-name">화성시</a>
+                <span class="ci-org-dept">도시교통국 · 서부권 균형발전 추진단</span>
+              </div>
+            </div>
           </div>
           <div class="contact-item">
             <span class="ci-label">📋 청원 제출일</span>

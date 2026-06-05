@@ -1,4 +1,4 @@
-﻿/* ═══════════════════════════════════════════
+/* ═══════════════════════════════════════════
    HHWSDC — Main JavaScript
    ═══════════════════════════════════════════ */
 
@@ -16,19 +16,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ─── HAMBURGER MENU ─── */
   const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
+  const navLinks  = document.getElementById('navLinks');
+  const overlay   = document.getElementById('nav-overlay');
+
+  function openMenu() {
+    navLinks.classList.add('open');
+    hamburger.classList.add('active');
+    hamburger.setAttribute('aria-expanded', 'true');
+    if (overlay) { overlay.classList.add('visible'); }
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    if (overlay) { overlay.classList.remove('visible'); }
+    document.body.style.overflow = '';
+  }
 
   hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded',
-      navLinks.classList.contains('open') ? 'true' : 'false'
-    );
+    navLinks.classList.contains('open') ? closeMenu() : openMenu();
   });
 
-  // Close on link click
+  // 오버레이 클릭 시 닫기
+  if (overlay) overlay.addEventListener('click', closeMenu);
+
+  // 메뉴 항목 클릭 시 닫기
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('open'));
+    link.addEventListener('click', closeMenu);
   });
+
+  // ESC 키 닫기
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMenu();
+  });
+
 
   /* ─── SCROLL REVEAL ─── */
   const revealObserver = new IntersectionObserver(

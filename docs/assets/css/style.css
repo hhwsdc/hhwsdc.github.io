@@ -167,7 +167,9 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 64px;
   height: 72px;
+  gap: 8px;
 }
 
 .nav-logo {
@@ -1363,9 +1365,39 @@ a.ci-value:hover { color: var(--gold); }
 
 @media (max-width: 800px) {
   .section { padding: 72px 0; }
-  .navbar { padding: 0 16px; }
+  .navbar { padding: 0 12px; }
 
-  .hamburger { display: flex; }
+  /* 네비게이션 바: 로고+햄버거 한 줄로 안정적 배치 */
+  .nav-inner {
+    height: 62px;
+    min-height: 62px;
+    padding: 0 4px;
+    gap: 0;
+  }
+
+  /* 로고 영역: 최대 너비 제한으로 햄버거 항상 보임 */
+  .nav-logo {
+    max-width: calc(100% - 60px);
+    overflow: hidden;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  /* 로고 텍스트: 작은 화면에서 말줄임 */
+  .logo-ko {
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+  }
+
+  /* 햄버거: 오른쪽 고정, flex-shrink 방지 */
+  .hamburger {
+    display: flex;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
   .nav-overlay { display: block; }
 
   /* 드로어 상단 헤더 */
@@ -1514,6 +1546,14 @@ a.ci-value:hover { color: var(--gold); }
   .impact-stats { grid-template-columns: 1fr 1fr; }
   .docs-grid { grid-template-columns: 1fr; }
 }
+
+/* 아주 작은 화면: 로고 텍스트 숨겨서 햄버거 공간 확보 */
+@media (max-width: 400px) {
+  .logo-ko { display: none; }
+  .logo-en { display: none; }
+  .logo-stamp { height: 36px; }
+}
+
 
 /* --- INFOGRAPHIC BLOCKS --- */
 .infographic-block {

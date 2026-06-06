@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
@@ -29,29 +29,31 @@
     /* ── 로고 showcase block (about section) ── */
     .logo-showcase {
       display: flex; align-items: center; gap: 2rem;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(201,168,76,.25);
+      background: rgba(10, 22, 40, 0.03);
+      border: 1px solid rgba(201,168,76,.35);
       border-radius: 20px; padding: 2rem 2.5rem;
       margin-bottom: 3rem;
     }
     .logo-showcase-img {
       width: 100px; height: 100px; border-radius: 50%;
       object-fit: contain; flex-shrink: 0;
-      background: rgba(255,255,255,.07);
+      background: #ffffff;
       padding: 8px;
-      box-shadow: 0 0 24px rgba(201,168,76,.4);
+      box-shadow: 0 4px 16px rgba(10, 22, 40, 0.08);
+      border: 1px solid rgba(201,168,76,.2);
     }
     .logo-showcase-text h3 {
       font-family: 'Noto Serif KR', serif;
       font-size: clamp(1.1rem,2vw,1.4rem);
-      font-weight: 900; color: #fff; margin-bottom: .4rem; line-height: 1.4;
+      font-weight: 900; color: var(--navy, #0a1628); margin-bottom: .4rem; line-height: 1.4;
     }
     .logo-showcase-text p {
-      font-size: .85rem; color: rgba(220,215,200,.75); line-height: 1.6; margin: 0;
+      font-size: .88rem; color: #000000; line-height: 1.7; margin: 0;
     }
     .logo-showcase-text .logo-en {
-      font-size: .78rem; color: var(--gold, #c9a84c);
+      font-size: .78rem; color: #000000;
       letter-spacing: .08em; font-weight: 700; margin-top: .25rem; display: block;
+      margin-bottom: .4rem;
     }
     @media(max-width:580px) {
       .logo-showcase { flex-direction: column; text-align: center; padding: 1.5rem; }

@@ -1381,6 +1381,8 @@ a.ci-value:hover { color: var(--gold); }
     overflow: hidden;
     flex-shrink: 1;
     min-width: 0;
+    order: 2;
+    margin-left: auto;
   }
 
   /* 로고 텍스트: 작은 화면에서 말줄임 */
@@ -1392,11 +1394,12 @@ a.ci-value:hover { color: var(--gold); }
     max-width: 200px;
   }
 
-  /* 햄버거: 오른쪽 고정, flex-shrink 방지 */
+  /* 햄버거: 왼쪽 고정, flex-shrink 방지 */
   .hamburger {
     display: flex;
     flex-shrink: 0;
-    margin-left: auto;
+    order: 1;
+    margin-left: 0;
   }
   .nav-overlay { display: block; }
 
@@ -1447,21 +1450,23 @@ a.ci-value:hover { color: var(--gold); }
   .nav-links {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
+    right: auto;
     width: min(320px, 85vw);
     height: 100dvh;
     background: linear-gradient(170deg, #0d1e38 0%, #091525 100%);
-    border-left: 1px solid rgba(201,168,76,.25);
+    border-right: 1px solid rgba(201,168,76,.25);
+    border-left: none;
     backdrop-filter: blur(24px);
     flex-direction: column;
     padding: 96px 0 40px;
     gap: 0;
     list-style: none;
-    transform: translateX(110%);
+    transform: translateX(-110%);
     transition: transform .4s cubic-bezier(.16,1,.3,1);
     z-index: 999;
     overflow-y: auto;
-    box-shadow: -12px 0 40px rgba(0,0,0,.5);
+    box-shadow: 12px 0 40px rgba(0,0,0,.5);
   }
   .nav-links.open { transform: translateX(0); }
 
@@ -1469,7 +1474,7 @@ a.ci-value:hover { color: var(--gold); }
   .nav-links li {
     width: 100%;
     opacity: 0;
-    transform: translateX(24px);
+    transform: translateX(-24px);
     transition: opacity .35s, transform .35s;
   }
   .nav-links.open li {

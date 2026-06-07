@@ -2135,7 +2135,8 @@ a.ci-value:hover { color: var(--gold); }
 }
 
 .org-tree ul {
-  padding-top: 30px;
+  padding-top: 0;
+  margin-top: 30px;
   position: relative;
   transition: all 0.5s;
   display: flex;
@@ -2194,7 +2195,7 @@ a.ci-value:hover { color: var(--gold); }
 .org-tree ul ul::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: -30px;
   left: 50%;
   border-left: 2px solid var(--gold);
   width: 0;

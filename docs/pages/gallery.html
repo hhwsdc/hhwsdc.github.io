@@ -7,7 +7,7 @@
   <meta name="description" content="화성화옹지구 서부발전 협의회(화서협)의 다양한 오프라인 활동, 세미나, 집회, 그리고 현장 기록 사진 갤러리" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20260607112500" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260607113500" />
 </head>
 <body>
 <div id="nav-overlay" class="nav-overlay"></div>
@@ -54,9 +54,20 @@
       <p class="section-desc">지속가능한 화성 서남부 발전과 경기국제공항 유치를 위해 발로 뛴 기록들입니다.</p>
     </div>
 
+    <!-- 연도별 필터 버튼 -->
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active" data-filter="all">전체</button>
+      <button class="filter-btn" data-filter="2026">2026년</button>
+      <button class="filter-btn" data-filter="2025">2025년</button>
+      <button class="filter-btn" data-filter="2024">2024년</button>
+      <button class="filter-btn" data-filter="2023">2023년</button>
+      <button class="filter-btn" data-filter="2022">2022년</button>
+    </div>
+
     <div class="gallery-grid">
+      <!-- 2026년 -->
       <!-- Card 1 -->
-      <div class="gallery-card reveal" onclick="openLightbox('../assets/img/gallery/photo1.png', '항공기 소음 문제 및 경기국제공항 대안 마련 토론회에서 발언 중인 김애화 회장')">
+      <div class="gallery-card reveal" data-year="2026" onclick="openLightbox('../assets/img/gallery/photo1.png', '항공기 소음 문제 및 경기국제공항 대안 마련 토론회에서 발언 중인 김애화 회장')">
         <div class="gallery-img-box">
           <span class="gallery-badge">토론회</span>
           <img src="../assets/img/gallery/photo1.png" alt="항공기 소음 문제 토론회" />
@@ -71,24 +82,8 @@
         </div>
       </div>
 
-      <!-- Card 2 -->
-      <div class="gallery-card reveal delay-1" onclick="openLightbox('../assets/img/gallery/photo2.png', '경기국제공항 유치 촉구 및 서부발전을 위한 정기 세미나 발표')">
-        <div class="gallery-img-box">
-          <span class="gallery-badge">세미나</span>
-          <img src="../assets/img/gallery/photo2.png" alt="경기국제공항 유치 촉구 세미나" />
-        </div>
-        <div class="gallery-info">
-          <h3>경기국제공항 유치 촉구 세미나</h3>
-          <p>경기국제공항 건설 타당성 및 화성 서부 지역 경제 연계 활성화를 위한 화서협 공식 정기 세미나 발표 현장입니다.</p>
-          <div class="gallery-meta">
-            <span class="date">2025.11</span>
-            <span class="more-btn">자세히 보기 →</span>
-          </div>
-        </div>
-      </div>
-
       <!-- Card 3 -->
-      <div class="gallery-card reveal delay-2" onclick="openLightbox('../assets/img/gallery/photo3.png', '화성국제공항 범시민단체 연합 공동 기자회견 성명서 발표')">
+      <div class="gallery-card reveal" data-year="2026" onclick="openLightbox('../assets/img/gallery/photo3.png', '화성국제공항 범시민단체 연합 공동 기자회견 성명서 발표')">
         <div class="gallery-img-box">
           <span class="gallery-badge">기자회견 / 집회</span>
           <img src="../assets/img/gallery/photo3.png" alt="화옹지구 후보지 선정 촉구 기자회견" />
@@ -103,8 +98,25 @@
         </div>
       </div>
 
+      <!-- 2025년 -->
+      <!-- Card 2 -->
+      <div class="gallery-card reveal" data-year="2025" onclick="openLightbox('../assets/img/gallery/photo2.png', '경기국제공항 유치 촉구 및 서부발전을 위한 정기 세미나 발표')">
+        <div class="gallery-img-box">
+          <span class="gallery-badge">세미나</span>
+          <img src="../assets/img/gallery/photo2.png" alt="경기국제공항 유치 촉구 세미나" />
+        </div>
+        <div class="gallery-info">
+          <h3>경기국제공항 유치 촉구 세미나</h3>
+          <p>경기국제공항 건설 타당성 및 화성 서부 지역 경제 연계 활성화를 위한 화서협 공식 정기 세미나 발표 현장입니다.</p>
+          <div class="gallery-meta">
+            <span class="date">2025.11</span>
+            <span class="more-btn">자세히 보기 →</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Card 4 -->
-      <div class="gallery-card reveal" onclick="openLightbox('../assets/img/gallery/photo4.png', '제 1회 화성 서부발전 세미나 성료 기념 촬영')">
+      <div class="gallery-card reveal" data-year="2025" onclick="openLightbox('../assets/img/gallery/photo4.png', '제 1회 화성 서부발전 세미나 성료 기념 촬영')">
         <div class="gallery-img-box">
           <span class="gallery-badge">간담회</span>
           <img src="../assets/img/gallery/photo4.png" alt="제 1회 화성 서부발전 세미나 기념 촬영" />
@@ -114,6 +126,105 @@
           <p>화성 화옹지구 서부발전협의회 주관으로 개최된 학술 세미나의 성공적 개최 후 참가 전문가 및 위원들과의 기념 촬영입니다.</p>
           <div class="gallery-meta">
             <span class="date">2025.11</span>
+            <span class="more-btn">자세히 보기 →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2024년 -->
+      <!-- Card 5 -->
+      <div class="gallery-card reveal" data-year="2024" onclick="openLightbox('../assets/img/gallery/photo_2024_1.png', '화성 화옹지구 환경 훼손 최소화를 위한 생태 환경 실증 조사')">
+        <div class="gallery-img-box">
+          <span class="gallery-badge">환경 조사</span>
+          <img src="../assets/img/gallery/photo_2024_1.png" alt="화옹지구 생태 환경 조사" />
+        </div>
+        <div class="gallery-info">
+          <h3>화옹지구 생태 환경 실증 조사</h3>
+          <p>화서협 자문단과 환경 전문가들이 화옹지구 간척지의 환경적 지속 가능성을 확보하고 조류 이동경로 영향을 분석하기 위해 실시한 생태조사 현장입니다.</p>
+          <div class="gallery-meta">
+            <span class="date">2024.03</span>
+            <span class="more-btn">자세히 보기 →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="gallery-card reveal" data-year="2024" onclick="openLightbox('../assets/img/gallery/photo_2024_2.png', '경기도의회 평화 광장 경기남부 국제공항 반영 촉구 궐기대회')">
+        <div class="gallery-img-box">
+          <span class="gallery-badge">기자회견 / 집회</span>
+          <img src="../assets/img/gallery/photo_2024_2.png" alt="경기국제공항 촉구 집회" />
+        </div>
+        <div class="gallery-info">
+          <h3>공항개발 계획 반영 촉구 집회</h3>
+          <p>경기도의회 앞 광장에서 경기남부권 1,000만 주민들의 항공 접근권 확보 및 경기국제공항의 국가 계획 반영을 정당하게 건의하는 궐기대회입니다.</p>
+          <div class="gallery-meta">
+            <span class="date">2024.08</span>
+            <span class="more-btn">자세히 보기 →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2023년 -->
+      <!-- Card 7 -->
+      <div class="gallery-card reveal" data-year="2023" onclick="openLightbox('../assets/img/gallery/photo_2023_1.png', '화서협 부설 정책연구소 주관 서남부 발전 대토론회')">
+        <div class="gallery-img-box">
+          <span class="gallery-badge">토론회</span>
+          <img src="../assets/img/gallery/photo_2023_1.png" alt="화서협 정책연구 토론회" />
+        </div>
+        <div class="gallery-info">
+          <h3>서남부 발전 및 공항 유치 토론회</h3>
+          <p>화성 서부권의 극심한 경제 낙후를 해결하기 위해 공항 배후 도시 및 교통망 확충의 경제적 기대 편익을 주민들에게 알리고 논의하는 정책 토론회입니다.</p>
+          <div class="gallery-meta">
+            <span class="date">2023.04</span>
+            <span class="more-btn">자세히 보기 →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="gallery-card reveal" data-year="2023" onclick="openLightbox('../assets/img/gallery/photo_2023_2.png', '여의도 국회 국토교통위원회 방문 및 청원 자료집 전달')">
+        <div class="gallery-img-box">
+          <span class="gallery-badge">간담회</span>
+          <img src="../assets/img/gallery/photo_2023_2.png" alt="국회 공식 청원 제출" />
+        </div>
+        <div class="gallery-info">
+          <h3>국회 국토위 공식 청원서 전달</h3>
+          <p>화서협 회장단과 임원진들이 직접 여의도 국회를 방문하여 국회 국토교통위원회 소속 의원들에게 화옹지구 공항 추진 타당성 자료집을 공식 전달했습니다.</p>
+          <div class="gallery-meta">
+            <span class="date">2023.11</span>
+            <span class="more-btn">자세히 보기 →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2022년 -->
+      <!-- Card 9 -->
+      <div class="gallery-card reveal" data-year="2022" onclick="openLightbox('../assets/img/gallery/photo_2022_1.png', '화성 서남부 소외 지역 주민 고령화 및 인프라 개선 주민간담회')">
+        <div class="gallery-img-box">
+          <span class="gallery-badge">간담회</span>
+          <img src="../assets/img/gallery/photo_2022_1.png" alt="우정읍 주민간담회" />
+        </div>
+        <div class="gallery-info">
+          <h3>화성 우정읍 주민 상생 간담회</h3>
+          <p>우정읍과 장안면 일대 고령화로 인한 지역 소멸 위기를 논의하고, 경기남부 국제공항 유치를 전제로 교통망이 들어설 수 있도록 의견을 나누는 간담회입니다.</p>
+          <div class="gallery-meta">
+            <span class="date">2022.05</span>
+            <span class="more-btn">자세히 보기 →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 10 -->
+      <div class="gallery-card reveal" data-year="2022" onclick="openLightbox('../assets/img/gallery/photo_2022_2.png', '화성 서부권 주민 대상 경기국제공항 조속 추진 서명 운동 부스 운영')">
+        <div class="gallery-img-box">
+          <span class="gallery-badge">서명 운동</span>
+          <img src="../assets/img/gallery/photo_2022_2.png" alt="범시민 서명 운동 캠페인" />
+        </div>
+        <div class="gallery-info">
+          <h3>범시민 국제공항 서명 운동</h3>
+          <p>화성 주민들의 뜻을 한데 모으기 위해 남양읍 및 향남읍 일대에서 경기국제공항 조속한 건설 착수를 청원하는 서명 가판대 캠페인을 진행했습니다.</p>
+          <div class="gallery-meta">
+            <span class="date">2022.10</span>
             <span class="more-btn">자세히 보기 →</span>
           </div>
         </div>
@@ -165,6 +276,43 @@
     if (event.key === 'Escape') {
       closeLightbox();
     }
+  });
+
+  // Filtering gallery items
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryCards = document.querySelectorAll('.gallery-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        galleryCards.forEach(card => {
+          const cardYear = card.getAttribute('data-year');
+          
+          if (filterValue === 'all' || cardYear === filterValue) {
+            card.style.display = 'flex';
+            // Smooth fade-in
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
+            }, 50);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.95)';
+            // Hide after transition ends
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
   });
 </script>
 </body>

@@ -358,14 +358,32 @@
 
   /* ---- Milestone marker (full-width) ---- */
   .tl-milestone {
-    width:100%; display:flex; justify-content:center;
-    position:relative; margin-bottom:3rem;
+    width:100%; display:flex; justify-content:center; align-items:center;
+    position:relative; margin:4.5rem 0 4rem;
+    z-index:2;
+  }
+  .tl-milestone::before {
+    content:''; position:absolute; left:5%; right:5%; top:50%;
+    height:2px; background:linear-gradient(90deg, transparent, rgba(201,168,76,.1) 15%, rgba(201,168,76,.6) 50%, rgba(201,168,76,.1) 85%, transparent);
+    transform:translateY(-50%); z-index:1;
   }
   .tl-milestone-inner {
-    background:linear-gradient(90deg,rgba(201,168,76,.15),rgba(201,168,76,.3),rgba(201,168,76,.15));
-    border:1px solid rgba(201,168,76,.4); border-radius:30px;
-    padding:.45rem 1.4rem; font-size:.8rem; font-weight:700;
-    color:var(--gold,#c9a84c); letter-spacing:.06em;
+    position:relative; z-index:2;
+    background:#0b1c33; /* Deep navy solid color to cleanly mask the vertical spine */
+    border:1.5px solid var(--gold,#c9a84c); border-radius:30px;
+    padding:.65rem 1.8rem; font-size:.88rem; font-weight:700;
+    color:#fff;
+    letter-spacing:.05em;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6), 0 0 15px rgba(201,168,76,0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform .3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .3s, border-color .3s;
+  }
+  .tl-milestone-inner:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7), 0 0 20px rgba(201, 168, 76, 0.35);
+    border-color: #f3d075;
   }
 
   /* ---- Responsive ---- */

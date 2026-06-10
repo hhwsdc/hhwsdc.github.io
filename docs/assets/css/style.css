@@ -932,6 +932,7 @@ h1, h2, h3, h4 {
   font-size: 13px;
   font-weight: 700;
   margin-bottom: 20px;
+  white-space: nowrap;
 }
 
 .noise-badge.bad { background: rgba(220,38,38,0.2); color: #fca5a5; }
@@ -2141,14 +2142,13 @@ a.ci-value:hover { color: var(--gold); }
   transition: all 0.5s;
   display: flex;
   justify-content: center;
-  gap: 30px;
 }
 
 .org-tree li {
   text-align: center;
   list-style-type: none;
   position: relative;
-  padding: 30px 10px 0 10px;
+  padding: 30px 15px 0 15px;
   transition: all 0.5s;
 }
 
@@ -2359,6 +2359,18 @@ a.ci-value:hover { color: var(--gold); }
   
   .org-tree li:first-child::before {
     display: none !important;
+  }
+
+  /* Responsive styling for noise-compare on mobile */
+  .noise-compare {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .noise-vs {
+    width: auto;
+    margin: 8px 0;
   }
 }
 

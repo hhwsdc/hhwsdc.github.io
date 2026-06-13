@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>협회일정 | HHWSDC</title>
+  <meta name="description" content="화성화옹지구 서부발전 협의회 (화서협) 공식 일정 및 주요 활동 스케줄 — 누구나 투명하게 조회 가능합니다." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260606164802" />
+  <style>
+    .calendar-card {
+      background: var(--white);
+      border: 1px solid rgba(200, 150, 42, 0.15);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow);
+      margin-bottom: 40px;
+    }
+    
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    
+    .calendar-title-area h2 {
+      font-size: 1.8rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    
+    .calendar-title-area p {
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+    
+    .cal-badge {
+      display: inline-block;
+      background: rgba(22, 163, 74, 0.1);
+      border: 1px solid rgba(22, 163, 74, 0.3);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+    
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid rgba(10, 22, 40, 0.2);
+      padding: 10px 24px;
+      font-size: 14px;
+      border-radius: 100px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    
+    .btn-outline-dark:hover {
+      background: rgba(10, 22, 40, 0.05);
+      border-color: var(--navy);
+      transform: translateY(-2px);
+    }
+    
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+    
+    .iframe-container iframe {
+      display: block;
+      background: #ffffff;
+    }
+    
+    .info-guide-box {
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      border-radius: var(--radius);
+      padding: 32px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      border: 1px solid rgba(200, 150, 42, 0.15);
+      border-left: 4px solid var(--gold);
+      box-shadow: var(--shadow);
+    }
+    
+    .guide-icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+    
+    .guide-content h3 {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    
+    .guide-content p {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    
+    .guide-content ul {
+      padding-left: 20px;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .guide-content ul strong {
+      color: var(--navy);
+    }
+    
+    @media (max-width: 768px) {
+      .calendar-card {
+        padding: 24px;
+      }
+      .calendar-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .btn-outline-dark {
+        width: 100%;
+        justify-content: center;
+      }
+      .iframe-container iframe {
+        height: 500px;
+      }
+      .info-guide-box {
+        flex-direction: column;
+        gap: 12px;
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="nav-overlay" class="nav-overlay"></div>
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/img/hhwsdc-logo.png" alt="HHWSDC 로고" class="logo-stamp" />
+      <div class="logo-text">
+        <span class="logo-ko">화서협</span>
+        <span class="logo-en">HHWSDC</span>
+      </div>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="intro.html">🏛️ 협의회 소개</a></li>
+      <li><a href="why.html">📍 화옹지구 당위성</a></li>
+      <li><a href="impact.html">📈 경제적 효과</a></li>
+      <li><a href="noise.html">🌿 소음·생태 공존</a></li>
+      <li><a href="policy.html">📋 정책 제안</a></li>
+      <li><a href="press.html">📰 언론 및 연구</a></li>
+      <li><a href="documents.html">📂 자료실</a></li>
+      <li><a href="gallery.html">📷 갤러리</a></li>
+      <li><a href="calendar.html" class="nav-active">📅 협회일정</a></li>
+      <li><a href="contact.html">✉️ 문의하기</a></li>
+      <li><a href="petition.html" class="nav-cta">✍️ 청원 참여</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="section-tag light">📅 협회일정</div>
+    <h1>협회 활동 및 일정</h1>
+    <p>화서협의 투명하고 공개적인 활동을 위해 구글 캘린더 일정을 실시간으로 공유합니다</p>
+  </div>
+</section>
+
+<section class="section section-gray" id="calendar">
+  <div class="container">
+    <div class="calendar-wrapper reveal">
+      <div class="calendar-card">
+        <div class="calendar-header">
+          <div class="calendar-title-area">
+            <span class="cal-badge">실시간 연동</span>
+            <h2>활동 스케줄러</h2>
+            <p>협회의 공식 일정과 진행 중인 회의, 주요 행사 일정을 투명하게 확인하실 수 있습니다.</p>
+          </div>
+          <div class="calendar-actions">
+            <a href="https://calendar.google.com/calendar/u/1/r?pli=1" target="_blank" rel="noopener" class="btn-outline-dark">
+              <span>📅 구글 캘린더에서 조회하기</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="iframe-container">
+          <iframe src="https://calendar.google.com/calendar/embed?src=hhwsdc%40gmail.com&ctz=Asia%2FSeoul" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- 안내 사항 -->
+    <div class="info-guide-box reveal delay-1">
+      <div class="guide-icon">💡</div>
+      <div class="guide-content">
+        <h3>캘린더 열람 및 권한 안내</h3>
+        <p>협회 일정표가 올바르게 보이지 않거나 권한 관련 메시지가 표시될 경우, 관리자 분께서는 아래 설정을 확인해 주시기 바랍니다.</p>
+        <ul>
+          <li><strong>일정 등록 및 변경:</strong> 캘린더의 일정 편집은 <code>hhwsdc</code> 공식 구글 계정으로 로그인한 상태에서만 가능합니다.</li>
+          <li><strong>공개 범위 설정:</strong> 캘린더가 전체에 공개되도록 설정해야 합니다. 구글 캘린더의 <strong>[해당 캘린더 설정 및 공유] ➔ [액세스 권한] ➔ [공개적으로 사용 가능하도록 설정]</strong> 체크 박스를 확인해 주세요.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 화성화옹지구 서부발전 협의회 (화서협) (HHWSDC)</p>
+      <p><a href="mailto:hhwsdc@gmail.com" style="color:var(--gold)">hhwsdc@gmail.com</a></p>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

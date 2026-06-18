@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>수원·병점 & 화성 윈윈 실현 방안 | 화성화옹지구 서부발전 협의회 (화서협)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260606164802" />
+  <style>
+    .doc-page { max-width: 1000px; margin: 0 auto; padding: 120px 24px 80px; }
+    .doc-page-header { text-align: center; margin-bottom: 60px; padding-bottom: 40px; border-bottom: 2px solid var(--gold-pale); }
+    .doc-page-header .badge { display: inline-block; background: var(--navy); color: var(--gold-light); font-size: 13px; font-weight: 700; padding: 6px 18px; border-radius: 100px; margin-bottom: 20px; border: 1px solid rgba(200,150,42,0.4); }
+    .doc-page-header h1 { font-size: 2rem; color: var(--navy); margin-bottom: 12px; line-height: 1.4; font-family: 'Noto Serif KR', serif; }
+    .doc-page-header .meta { font-size: 14px; color: var(--text-light); }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); font-weight: 600; font-size: 14px; margin-bottom: 40px; text-decoration: none; }
+    
+    .intro-box { background: var(--navy); color: var(--white); border-radius: var(--radius-lg); padding: 40px; margin-bottom: 50px; border-left: 5px solid var(--gold); }
+    .intro-box h2 { color: var(--gold-light); font-size: 1.5rem; margin-bottom: 16px; font-family: 'Noto Serif KR', serif; }
+    .intro-box p { color: rgba(255,255,255,0.85); line-height: 1.9; margin-bottom: 0; font-size: 1rem; }
+
+    .winwin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 50px; }
+    @media (max-width: 768px) { .winwin-grid { grid-template-columns: 1fr; } }
+
+    .winwin-card { background: var(--off-white); border-radius: var(--radius-lg); padding: 35px; border: 1px solid var(--gray-light); box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .winwin-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .winwin-card h2 { font-size: 1.4rem; color: var(--navy); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--gold-pale); display: flex; align-items: center; gap: 10px; font-family: 'Noto Serif KR', serif; }
+    .winwin-card.hw h2 { color: #1e3a8a; border-bottom-color: rgba(30,58,138,0.2); }
+    .winwin-card.sw h2 { color: #701a75; border-bottom-color: rgba(112,26,117,0.2); }
+    
+    .item-list { display: flex; flex-direction: column; gap: 20px; }
+    .item-box { background: var(--white); border-radius: var(--radius); padding: 20px; border: 1px solid rgba(0,0,0,0.05); }
+    .item-box h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 8px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+    .item-box p { font-size: 0.92rem; color: var(--text); line-height: 1.6; margin: 0; }
+    
+    .synergy-section { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); border: 2px solid var(--gold); border-radius: var(--radius-lg); padding: 45px; color: var(--white); margin-top: 50px; text-align: center; }
+    .synergy-section h2 { color: var(--gold-light); font-size: 1.7rem; margin-bottom: 20px; font-family: 'Noto Serif KR', serif; }
+    .synergy-section p { color: rgba(255,255,255,0.85); line-height: 1.9; max-width: 800px; margin: 0 auto 30px; font-size: 0.98rem; }
+    
+    .synergy-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: left; }
+    @media (max-width: 768px) { .synergy-cards { grid-template-columns: 1fr; } }
+    .scard { background: rgba(255,255,255,0.05); border-left: 3px solid var(--gold); padding: 20px; border-radius: var(--radius); }
+    .scard h4 { color: var(--gold-light); font-size: 1.05rem; margin-bottom: 8px; font-weight: 700; }
+    .scard p { font-size: 0.88rem; line-height: 1.6; color: rgba(255,255,255,0.75); margin: 0; }
+
+    .objection-resolution { margin-top: 60px; }
+    .objection-resolution h2 { font-size: 1.6rem; color: var(--navy); border-bottom: 3px solid var(--gold); padding-bottom: 12px; margin-bottom: 30px; font-family: 'Noto Serif KR', serif; }
+    
+    .faq-item { background: var(--off-white); border-radius: var(--radius); padding: 25px; margin-bottom: 20px; border: 1px solid var(--gray-light); }
+    .faq-q { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .faq-q .badge-q { background: var(--navy); color: var(--gold-light); padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+    .faq-a { font-size: 0.95rem; color: var(--text); line-height: 1.7; margin: 0; padding-left: 36px; }
+
+    .tag-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; justify-content: center; }
+    .tag-item { background: rgba(200,150,42,0.15); border: 1px solid rgba(200,150,42,0.3); color: var(--gold-light); border-radius: 100px; padding: 6px 16px; font-size: 13px; font-weight: 600; }
+    .tag-item.green { background: rgba(22,163,74,0.15); border-color: rgba(22,163,74,0.3); color: #4ade80; }
+  </style>
+</head>
+<body>
+<div id="nav-overlay" class="nav-overlay"></div>
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/img/hhwsdc-logo.png" alt="HHWSDC 로고" class="logo-stamp" />
+      <div class="logo-text">
+        <span class="logo-ko">화서협</span>
+        <span class="logo-en">HHWSDC</span>
+      </div>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="intro.html">🏛️ 협의회 소개</a></li>
+      <li><a href="why.html">📍 화옹지구 당위성</a></li>
+      <li><a href="impact.html">📈 경제적 효과</a></li>
+      <li><a href="noise.html">🌿 소음·생태 공존</a></li>
+      <li><a href="policy.html">📋 정책 제안</a></li>
+      <li><a href="press.html">📰 언론 및 연구</a></li>
+      <li><a href="documents.html">📂 자료실</a></li>
+      <li><a href="gallery.html">📷 갤러리</a></li>
+      <li><a href="calendar.html">📅 협회일정</a></li>
+      <li><a href="contact.html">✉️ 문의하기</a></li>
+      <li><a href="petition.html" class="nav-cta">✍️ 청원 참여</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="doc-page">
+  <a href="../index.html" class="back-link">← 홈으로 돌아가기</a>
+
+  <div class="doc-page-header">
+    <div class="badge">상생 및 윈윈 실현 방안</div>
+    <h1>수원·병점 군공항 이전 및 경기남부 국제공항 건설<br />두 지역의 상생을 위한 윈윈(Win-Win) 실현 방안</h1>
+    <p class="meta">화성화옹지구 서부발전 협의회 (화서협) (HHWSDC)</p>
+  </div>
+
+  <div class="intro-box">
+    <h2>🤝 갈등을 넘어 공존으로: 군공항+국제공항 병행패키지</h2>
+    <p>
+      수원·병점 군공항의 단순 이전은 화성 시민에게는 일방적인 소음 피해와 지역 희생을 떠넘기는 방식으로 비춰져 강한 반대에 부딪혀 왔습니다. 
+      그러나 **'군공항 이전'과 '경기남부 민간 국제공항 건설'을 병행패키지**로 묶고, 화성 서부권에 대규모 SOC 투자와 피해보상 특별법을 지원하며, 수원·병점에는 종전 부지의 초강력 첨단 개발을 보장한다면 두 지역 모두의 숙원을 동시에 해결하는 대한민국 최대의 상생 윈윈 사업이 될 것입니다.
+    </p>
+  </div>
+
+  <div class="winwin-grid">
+    
+    <!-- 화성 화옹지구 측 혜택 및 안심 보장 -->
+    <div class="winwin-card hw">
+      <h2>🛡️ 화성 화옹지구의 5대 안심·혜택 대책</h2>
+      <div class="item-list">
+        
+        <div class="item-box">
+          <h3>🔊 1. 소음 피해보장 및 안심 설계</h3>
+          <p>
+            내륙이 아닌 **서해 바다 방향 활주로 배치**를 설계하여 이착륙 소음의 내륙 유입을 원천적으로 차단합니다. 또한, 기존 노후 전투기가 아닌 최첨단 저소음 기종을 배치하고 야간 이착륙을 제한(커퓨 타임 도입)하며, 공항 주변에 대규모 완충녹지와 차단 방음림을 조성합니다.
+          </p>
+        </div>
+
+        <div class="item-box">
+          <h3>🌿 2. 친환경 에코공항 및 생태계 공존</h3>
+          <p>
+            화성호 습지와 철새 서식지를 보호하기 위한 특별 생태보전구역을 지정하고 공항 주변을 친환경 녹지 파크로 조성합니다. 저탄소 에너지를 도입하여 생태계 훼손을 최소화하는 '그린 에코 포트(Green Eco-Port)' 모델을 실현합니다.
+          </p>
+        </div>
+
+        <div class="item-box">
+          <h3>🚇 3. 철도·도로망 확충 교통 대혁명</h3>
+          <p>
+            신안산선 및 GTX 라인을 공항까지 직접 연장하고 **'경기남부 국제공항역'을 신설**하여 화성 서남부권의 대중교통 인프라를 동탄 수준으로 끌어올립니다. 주변 국도 및 지방도를 6~8차선으로 획기적으로 확장하여 상습 정체를 해소합니다.
+          </p>
+        </div>
+
+        <div class="item-box">
+          <h3>🏢 4. 공항 배후 '경제자유구역' 지정</h3>
+          <p>
+            화옹지구 주변을 경제자유구역으로 지정하여 항공 물류 배후단지, MRO(항공정비) 단지, 첨단 R&D 및 친환경 모빌리티 대기업을 유치합니다. 이를 통해 **약 3만 명의 일자리를 신설**하여 자녀 세대가 다시 고향으로 돌아와 정착하는 젊은 도시를 만듭니다.
+          </p>
+        </div>
+
+        <div class="item-box">
+          <h3>🎁 5. 주민복지기금 특별법 및 매향리 치유</h3>
+          <p>
+            매향리 과거 폭격 피해 주민을 위한 국가 차원의 종합 의료·건강 기금을 설치하고, 매향리 평화생태공원을 국가 관리로 승격시킵니다. 공항 수입의 일부가 화성 서부 주민 복지 기금으로 매년 자동 적립되는 조례 및 특별법을 제정합니다.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 수원 병점 측 혜택 및 경제 활성화 -->
+    <div class="winwin-card sw">
+      <h2>📈 수원·병점의 3대 경제 활성화 대책</h2>
+      <div class="item-list">
+        
+        <div class="item-box">
+          <h3>💻 1. K-실리콘밸리 첨단 스마트시티 조성</h3>
+          <p>
+            이전되는 기존 수원 군공항 부지(약 522만㎡)에 대규모 ICT, 반도체 R&D, 바이오 테크 메가클러스터를 조성합니다. 단순 아파트 단지가 아닌 첨단 일자리와 주거, 문화가 융합된 **대한민국 최대의 '한국형 실리콘밸리'**로 거듭납니다.
+          </p>
+        </div>
+
+        <div class="item-box">
+          <h3>🏗️ 2. 고도제한 전면 해제로 도시 재생 가속화</h3>
+          <p>
+            수십 년간 수원 영통·권선구 및 화성 병점역 일대 주민들의 재산권을 침해해 왔던 **비행안전구역 고도제한이 전면 해제**됩니다. 이를 통해 노후 주거지역의 재건축·재개발이 즉시 활성화되어 지역 경제 활성화 및 자산가치 대도약의 발판을 마련합니다.
+          </p>
+        </div>
+
+        <div class="item-box">
+          <h3>🚉 3. 병점역 중심의 복합 환승 거점 구축</h3>
+          <p>
+            GTX 노선 및 신안산선 연계의 핵심 환승역인 병점역 일대를 대규모 상업·유통·문화 융합 거점으로 도약시킵니다. 군사시설로 인해 단절되었던 도시 중심부가 연결되면서 유동인구가 폭발적으로 늘어나 상권이 획기적으로 활성화됩니다.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 산업적 시너지 섹션 -->
+  <div class="synergy-section">
+    <h2>🌍 대한민국 국가 경제의 거대한 시너지 효과</h2>
+    <p>
+      수원·용인·화성·평택의 반도체 메가클러스터와 기아오토랜드 등 자동차 산단이 유기적으로 연결된 경기 남부는 대한민국 수출액의 핵심 거점입니다. 
+      화옹지구 국제공항 개항 시, 기업들은 수출 물류비용을 연간 수천억 원 절감하며 국가 산업 경쟁력을 한 단계 더 끌어올리게 됩니다.
+    </p>
+    <div class="synergy-cards">
+      <div class="scard">
+        <h4>📦 물류비용 획기적 절감</h4>
+        <p>인천공항까지 100km 이상 이동해야 했던 육상 수송 거리를 절반 이하로 줄이고 정체비용을 획기적으로 낮춥니다.</p>
+      </div>
+      <div class="scard">
+        <h4>⚡ 반도체 리드타임 단축</h4>
+        <p>시간이 생명인 반도체 핵심 장비와 완성 부품을 현지 공항에서 생산 즉시 해외로 직수출하여 납기를 최소화합니다.</p>
+      </div>
+      <div class="scard">
+        <h4>💰 대규모 민간 투자 유치</h4>
+        <p>공항 및 철도망 연계로 화성 서부권에 글로벌 MRO 기업 및 첨단 외국인 투자 기업의 자발적 유입을 이끌어 냅니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 시민들의 오해와 진실 -->
+  <div class="objection-resolution">
+    <h2>❓ 화옹지구 시민들이 묻고 답하다</h2>
+    
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="badge-q">Q</span>
+        <span>결국은 수원 군공항 소음과 고통을 화성으로 떠넘기는 꼼수가 아닌가요?</span>
+      </div>
+      <p class="faq-a">
+        단순히 전투 비행장만 옮기는 사업이라면 강력히 반대해야 마땅합니다. 하지만 본 패키지는 **'민간 국제공항과 대규모 철도·도로 인프라 개발'이 융합된 상생안**입니다. 활주로 각도를 서해안 바다 쪽으로 설계하기 때문에 내륙 민가에 미치는 소음은 원천 차단되며, 국방부와 지자체의 공동안전성 검증을 거친 후 건설됩니다. 수원과 화성이 합심하여 더 큰 국가 예산과 인프라 혜택을 함께 따내어 윈윈하는 전략입니다.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="badge-q">Q</span>
+        <span>과거 매향리의 폭격 피해 고통이 화옹지구에서 반복되는 것은 아닌가요?</span>
+      </div>
+      <p class="faq-a">
+        과거 매향리 쿠니사격장은 주민들 머리 위에서 폭탄을 투하하고 사격 훈련을 했던 불법적 군사 연습장이었습니다. 이전될 현대식 군공항은 철저히 통제된 기지 내에서만 운영되며, 전투기 항로 역시 내륙 주거지가 아닌 해안 및 해상 회피 경로로 고정됩니다. 또한 주민들의 역사적 아픔을 보듬기 위해 국가 차원의 치유 기금과 선행 보상 패키지 마련을 사업 시작의 전제 조건으로 법제화할 것입니다.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="badge-q">Q</span>
+        <span>화옹지구 갯벌과 생태계가 공항 건설로 전부 파괴되는 것은 아닌가요?</span>
+      </div>
+      <p class="faq-a">
+        환경 훼손 우려를 불식시키기 위해 생태 보전과 활주로 건설을 병행하는 '에코 포트(Eco-Port)' 기술을 전면 도입합니다. 인천공항 영종도 습지 공존 사례와 일본 간사이 공항의 철새 우회 항로 관리 기법을 벤치마킹하여, 공신력 있는 환경단체 및 독립된 학술기관이 참여하는 생태 감시단을 상설 운영하고 화성호 생태 공원화를 적극 추진합니다.
+      </p>
+    </div>
+  </div>
+
+  <div class="tag-row">
+    <span class="tag-item">수원·화성 상생 패키지</span>
+    <span class="tag-item green">소음 바다 방향 분산</span>
+    <span class="tag-item green">GTX·신안산선 국제공항역</span>
+    <span class="tag-item">고도제한 해제</span>
+    <span class="tag-item">K-실리콘밸리 개발</span>
+    <span class="tag-item green">매향리 선행 치유</span>
+  </div>
+
+  <div style="text-align:center; margin-top:60px; padding-top:32px; border-top:1px solid var(--gray-light);">
+    <img src="../assets/img/hwaong_west_stamp.png" alt="인장" style="width:80px; margin:0 auto 16px;" />
+    <p style="font-family:'Noto Serif KR',serif; font-weight:700; color:var(--navy); font-size:1.1rem;">화성화옹지구 서부발전 협의회 (화서협)</p>
+    <p style="font-size:14px; color:var(--text-light);">Hwaseong Hwaong Western Development Council (HHWSDC)</p>
+    <a href="mailto:hhwsdc@gmail.com" style="color:var(--gold); font-weight:600;">hhwsdc@gmail.com</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 화성화옹지구 서부발전 협의회 (화서협) (HHWSDC)</p>
+      <p><a href="mailto:hhwsdc@gmail.com" style="color:var(--gold)">hhwsdc@gmail.com</a></p>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

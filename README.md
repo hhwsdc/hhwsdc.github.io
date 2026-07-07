@@ -8,6 +8,87 @@
 
 경기남부권의 항공수요, 물류 경쟁력, 그리고 수도권 남부와 서해안권의 균형발전을 도모하기 위한 화성화옹지구 서부발전 협의회 (화서협)(HHWSDC)의 공식 웹페이지 저장소입니다.
 
+## 🔎 한눈에 보기 (At a Glance)
+
+방문자가 정적 웹사이트에서 콘텐츠를 열람하고, 청원·문의 폼을 통해 서버 없이 운영진에게 의견을 전달하기까지의 전체 구조입니다.
+
+```mermaid
+flowchart LR
+    V["👥 방문자<br/>(시민 · 언론 · 정책담당자)"]
+
+    subgraph GH["☁️ GitHub Pages (정적 호스팅)"]
+        direction TB
+        IDX["🏠 index.html<br/>메인 랜딩"]
+        PG["📄 pages/*.html<br/>주제별 콘텐츠"]
+        AS["🎨 assets/<br/>CSS · JS · 이미지"]
+    end
+
+    subgraph CONTENT["📚 주요 콘텐츠"]
+        direction TB
+        WHY["📍 화옹지구 당위성"]
+        IMP["📈 경제적 효과"]
+        NOISE["🌿 소음·생태 공존"]
+        WIN["🤝 상생 윈윈 방안"]
+        PET["✍️ 청원·문의 참여"]
+    end
+
+    FS["📧 FormSubmit.co<br/>(서버리스 메일 전송)"]
+    MAIL["📥 hhwsdc@gmail.com<br/>운영진 수신"]
+
+    V --> GH
+    IDX --> PG
+    PG --> CONTENT
+    PET -->|"AJAX POST"| FS
+    FS --> MAIL
+```
+
+| 구성 요소 | 역할 | 설명 | 경로 |
+|---|---|---|---|
+| `docs/index.html` | 🏠 메인 | 협의회 소개·핵심 메시지를 담은 랜딩 페이지 | [바로가기](./docs/index.html) |
+| `docs/pages/` | 📄 콘텐츠 | 당위성·경제효과·소음·상생 윈윈·정책·청원 등 주제별 페이지 | [바로가기](./docs/pages/) |
+| `docs/assets/` | 🎨 정적 리소스 | 스타일(CSS)·동작(JS)·이미지 등 프런트엔드 자원 | [바로가기](./docs/assets/) |
+| FormSubmit.co | 📧 폼 처리 | 백엔드 서버 없이 문의·청원 폼을 이메일로 전송하는 서버리스 서비스 | 외부 서비스 |
+| GitHub Pages | ☁️ 호스팅 | `main` 브랜치의 `docs/` 를 정적 웹사이트로 자동 배포 | 외부 서비스 |
+
+## 🔄 동작 흐름 (Operation Flow)
+
+### 1. 청원·문의 제출 흐름 (Runtime Data Flow)
+
+방문자가 폼을 제출하면, 별도의 서버 없이 FormSubmit 서버리스 서비스를 거쳐 운영진 이메일로 실시간 전달됩니다.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant U as 👤 방문자
+    participant B as 🌐 브라우저 (contact.html)
+    participant FS as 📧 FormSubmit.co
+    participant M as 📥 hhwsdc@gmail.com
+
+    U->>B: 청원·문의 폼 작성 후 제출
+    B->>B: Honeypot(_honey) 봇 검증
+    B->>FS: fetch() 비동기 POST (AJAX)
+    Note over B,FS: 엔드포인트<br/>https://formsubmit.co/ajax/hhwsdc@gmail.com
+    FS->>M: 이메일 전송 (제목 [HHWSDC] 자동 분류)
+    FS-->>B: JSON 응답 (성공 / 실패)
+    B-->>U: 제출 완료 안내 메시지 표시
+    M->>M: 운영진 확인 및 후속 대응
+```
+
+### 2. 콘텐츠 배포 흐름 (Build & Deploy Flow)
+
+편집자가 소스를 수정해 `main` 브랜치에 푸시하면, GitHub Pages가 자동으로 빌드·배포하여 실시간 웹사이트에 반영합니다.
+
+```mermaid
+flowchart LR
+    E["✏️ 편집자<br/>HTML · CSS · JS 수정"] -->|git commit| R["📦 로컬 저장소"]
+    R -->|git push| GHR["🐙 GitHub (main 브랜치)"]
+    GHR -->|자동 빌드| GP["☁️ GitHub Pages"]
+    GP -->|배포| SITE["🌐 hhwsdc.github.io<br/>실시간 반영"]
+```
+
+> 💡 **핵심 설계 원칙 — "서버 없이, 정적으로, 누구나 기여 가능하게"**
+> 별도의 백엔드 서버 없이 GitHub Pages 정적 호스팅과 FormSubmit 서버리스 메일 전송만으로 운영하여, 운영 비용을 최소화하고 유지보수를 단순화했습니다.
+
 ## 🏛️ 주요 역할 및 소개
 * **설립 목적**: 개발이 정체된 화옹지구의 균형 발전을 이루고 경기국제공항 유치를 통해 지역 경제 활성화를 추진하는 시민 협의회입니다.
 * **주요 활동**: 지리적 우위, 산업 시너지, 소음 영향 분석 등 실증 조사를 기반으로 정부와 지자체에 건설적 정책 제안을 제출합니다.
